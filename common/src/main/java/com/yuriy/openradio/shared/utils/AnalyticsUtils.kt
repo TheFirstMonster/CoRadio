@@ -16,11 +16,7 @@
 
 package com.yuriy.openradio.shared.utils
 
-import android.os.Bundle
 import android.util.Log
-import com.google.firebase.analytics.ktx.analytics
-import com.google.firebase.crashlytics.ktx.crashlytics
-import com.google.firebase.ktx.Firebase
 
 /**
  * Created by Yuriy Chernyshov
@@ -28,69 +24,42 @@ import com.google.firebase.ktx.Firebase
  * On 7/26/16
  * E-Mail: chernyshov.yuriy@gmail.com
  *
- * A helper class designed to assist with Analytics APIs.
+ * A helper class designed to assist with logging.
  */
 object AnalyticsUtils {
-
-    private const val EVENT_UNSUPPORTED_PLAYLIST_V2 = "EVENT_UNSUPPORTED_PLAYLIST_V2"
-    private const val EVENT_METADATA = "EVENT_METADATA"
-    private const val EVENT_CANT_DECODE_BITES = "EVENT_CANT_DECODE_BITES_V2"
-    private const val EVENT_GDRIVE_FILE_DELETED = "EVENT_GDRIVE_FILE_DELETED"
-    private const val EVENT_ABOUT_PAGE = "EVENT_ABOUT_PAGE"
-    private const val EVENT_EMPTY_LOCAL_CONFIG = "EVENT_EMPTY_LOCAL_CONFIG"
-    private const val KEY_METADATA = "KEY_METADATA"
-    private const val KEY_URL = "KEY_URL"
-    private const val KEY_BYTES_SIZE = "KEY_BYTES_SIZE"
-    private const val KEY_URL_INVALID = "KEY_URL_INVALID"
-    private const val KEY_MSG = "KEY_MSG"
 
     fun logMessage(message: String, severity: Int = Log.DEBUG) {
         when (severity) {
             Log.ERROR -> AppLogger.e(message)
             else -> AppLogger.d(message)
         }
-        Firebase.crashlytics.log(message)
     }
 
     fun logUnsupportedPlaylist(value: String) {
-        val bundle = Bundle()
-        bundle.putString(KEY_URL, value)
-        Firebase.analytics.logEvent(EVENT_UNSUPPORTED_PLAYLIST_V2, bundle)
+        AppLogger.d("Unsupported playlist: $value")
     }
 
     fun logUnsupportedInvalidPlaylist(value: String) {
-        val bundle = Bundle()
-        bundle.putString(KEY_URL_INVALID, value)
-        Firebase.analytics.logEvent(EVENT_UNSUPPORTED_PLAYLIST_V2, bundle)
+        AppLogger.d("Unsupported invalid playlist: $value")
     }
 
     fun logMetadata(value: String) {
-        val bundle = Bundle()
-        bundle.putString(KEY_METADATA, value)
-        Firebase.analytics.logEvent(EVENT_METADATA, bundle)
+        AppLogger.d("Metadata: $value")
     }
 
     fun logAboutOpen() {
-        Firebase.analytics.logEvent(EVENT_ABOUT_PAGE, Bundle())
+        AppLogger.d("About page opened")
     }
 
     fun logEmptyLocalConfig(msg: String) {
         AppLogger.w(msg)
-        val bundle = Bundle()
-        bundle.putString(KEY_MSG, msg)
-        Firebase.analytics.logEvent(EVENT_EMPTY_LOCAL_CONFIG, bundle)
     }
 
     fun logBitmapDecode(value: String, bytesSize: Int) {
-        val bundle = Bundle()
-        bundle.putString(KEY_URL, value)
-        bundle.putInt(KEY_BYTES_SIZE, bytesSize)
-        Firebase.analytics.logEvent(EVENT_CANT_DECODE_BITES, bundle)
+        AppLogger.d("Bitmap decode failed - URL: $value, Size: $bytesSize bytes")
     }
 
     fun logGDriveFileDeleted(value: String) {
-        val bundle = Bundle()
-        bundle.putString(KEY_MSG, value)
-        Firebase.analytics.logEvent(EVENT_GDRIVE_FILE_DELETED, bundle)
+        AppLogger.d("Google Drive file deleted: $value")
     }
 }

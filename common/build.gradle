@@ -3,7 +3,6 @@ plugins {
 }
 apply plugin: "com.android.library"
 apply plugin: "kotlin-android"
-apply plugin: "com.google.gms.google-services"
 apply from: "../constants.gradle"
 
 android {
@@ -20,11 +19,9 @@ android {
 
     buildTypes {
         debug {
-            manifestPlaceholders.firebaseCrashlyticsCollectionEnabled = false
         }
 
         release {
-            manifestPlaceholders.firebaseCrashlyticsCollectionEnabled = true
         }
     }
     compileOptions {
@@ -70,28 +67,6 @@ dependencies {
     implementation "androidx.work:work-runtime-ktx:$workVersion"
     implementation "androidx.core:core-ktx:$kotlinCoreKtx"
     implementation "androidx.activity:activity-ktx:$kotlinActivityKtx"
-    // Import the Firebase BoM (see: https://firebase.google.com/docs/android/learn-more#bom)
-    api platform("com.google.firebase:firebase-bom:$firebaseBom")
-    api ("com.google.firebase:firebase-auth-ktx") {
-        exclude module: "play-services-ads-identifier"
-        exclude module: "play-services-measurement"
-        exclude module: "play-services-measurement-sdk"
-    }
-    api ("com.google.firebase:firebase-firestore-ktx") {
-        exclude module: "play-services-ads-identifier"
-        exclude module: "play-services-measurement"
-        exclude module: "play-services-measurement-sdk"
-    }
-    api ("com.google.firebase:firebase-analytics-ktx") {
-        exclude module: "play-services-ads-identifier"
-        exclude module: "play-services-measurement"
-        exclude module: "play-services-measurement-sdk"
-    }
-    api ("com.google.firebase:firebase-crashlytics-ktx") {
-        exclude module: "play-services-ads-identifier"
-        exclude module: "play-services-measurement"
-        exclude module: "play-services-measurement-sdk"
-    }
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinxCoroutinesAndroid"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinxCoroutinesCore"
     api "androidx.media3:media3-exoplayer:$media3Version"

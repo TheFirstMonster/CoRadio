@@ -16,10 +16,9 @@
 
 package com.yuriy.openradio.shared.model.parser
 
-import com.google.firebase.firestore.QueryDocumentSnapshot
 import com.yuriy.openradio.shared.model.media.RadioStation
 
 interface FeaturedParserLayer {
 
-    fun getRadioStation(snapshot: QueryDocumentSnapshot): RadioStation
+    fun getRadioStation(snapshot: Any): RadioStation
 }

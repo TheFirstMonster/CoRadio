@@ -66,13 +66,6 @@ project.ext {
     versionCode = 0
 
     /**
-     * Firebase
-     */
-    firebaseCrashlyticsGradle = "2.9.9"
-    // The last version support API 17.
-    firebaseBom = "28.4.2"
-
-    /**
      * Sign
      */
     storeFileProp = ""

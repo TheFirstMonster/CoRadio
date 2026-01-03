@@ -1,7 +1,5 @@
 apply plugin: "com.android.application"
 apply plugin: "kotlin-android"
-apply plugin: "com.google.firebase.crashlytics"
-apply plugin: "com.google.gms.google-services"
 apply from: "../constants.gradle"
 apply from: "../sign.gradle"
 

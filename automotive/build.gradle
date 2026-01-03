@@ -2,8 +2,6 @@ plugins {
     id "com.android.application"
     id "kotlin-android"
 }
-apply plugin: "com.google.gms.google-services"
-apply plugin: "com.google.firebase.crashlytics"
 apply from: "../constants.gradle"
 apply from: "../sign.gradle"
 

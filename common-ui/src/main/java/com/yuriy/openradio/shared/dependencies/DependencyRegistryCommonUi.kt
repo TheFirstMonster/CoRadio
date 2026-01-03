@@ -17,8 +17,6 @@
 package com.yuriy.openradio.shared.dependencies
 
 import android.content.Context
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.ktx.initialize
 import com.yuriy.openradio.shared.model.cast.CastLayer
 import com.yuriy.openradio.shared.model.eq.EqualizerLayer
 import com.yuriy.openradio.shared.model.logging.LoggingLayer
@@ -124,7 +122,6 @@ object DependencyRegistryCommonUi :
             context,
             sRadioStationManagerLayer
         )
-        Firebase.initialize(context)
         sCloudStoreManager = CloudStoreManager()
         sFileStoraManager = FileStoreManager()
 

@@ -815,7 +815,7 @@ class OpenRadioService : MediaLibraryService() {
             if (items.isEmpty()) {
                 val newItems = mutableListOf<MediaItem>()
                 for (item in mBrowseTree.getMediaItemsByMediaId(mCurrentParentId)) {
-                    // Firebase reported many instances with invalid configuration
+                    // Verify valid configuration
                     if (item.localConfiguration == null) {
                         val msg = try {
                             "${item.mediaId}-${IntentUtils.bundleToString(item.mediaMetadata.toBundle())}"
