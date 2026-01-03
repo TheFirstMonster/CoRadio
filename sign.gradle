@@ -19,7 +19,10 @@ if (signConfFile.canRead()) {
     aliasProp = signProps["alias"].toString()
     pwdProp = signProps["pwd"].toString()
 } else {
-    throw new GradleException("Could not read sign.properties. File exists: ${signConfFile.exists()}")
+    println "WARNING: Could not read sign.properties. Release signing will be skipped."
+    project.ext.storeFileProp = null
+    aliasProp = null
+    pwdProp = null
 }
 
 tasks.configureEach { task ->
