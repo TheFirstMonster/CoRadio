@@ -54,11 +54,6 @@ class LoggingLayerImpl(private val mContext: Context) : LoggingLayer {
     private var mUser = AppUtils.EMPTY_STRING
     private var mPwd = AppUtils.EMPTY_STRING
 
-    init {
-        mUser = mContext.resources.openRawResource(R.raw.email_usr).bufferedReader().use { it.readText() }
-        mPwd = mContext.resources.openRawResource(R.raw.email_pwd).bufferedReader().use { it.readText() }
-    }
-
     override fun collectAdbLogs(onSuccess: (file: File) -> Unit, onError: (msg: String) -> Unit) {
         CoroutineScope(Dispatchers.IO).launch {
             clearLogs()
