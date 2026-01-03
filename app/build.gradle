@@ -32,19 +32,25 @@ android {
 
     signingConfigs {
         config {
-            keyAlias aliasProp
-            keyPassword pwdProp
-            storeFile file(project.ext.storeFileProp)
-            storePassword pwdProp
+            if (project.ext.storeFileProp != null) {
+                keyAlias aliasProp
+                keyPassword pwdProp
+                storeFile file(project.ext.storeFileProp)
+                storePassword pwdProp
+            }
         }
     }
 
     buildTypes {
         debug {
-            signingConfig signingConfigs.config
+            if (project.ext.storeFileProp != null) {
+                signingConfig signingConfigs.config
+            }
         }
         release {
-            signingConfig signingConfigs.config
+            if (project.ext.storeFileProp != null) {
+                signingConfig signingConfigs.config
+            }
         }
     }
 
