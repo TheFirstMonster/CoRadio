@@ -60,7 +60,6 @@ class AboutDialog : BaseDialogFragment() {
         setOnClickOnText(context, view, R.id.about_web_radio_link_view, WEB_RADIO_URL)
         setOnClickOnText(context, view, R.id.about_playlist_parser_name_view, PLAY_LIST_PARSER_URL)
         setOnClickOnText(context, view, R.id.about_easy_swipe_name_view, SWIPE_EFFECT_URL)
-        setOnClickOnImage(context, view, R.id.about_item_support_btn, SUPPORT_LINK)
 
         AnalyticsUtils.logAboutOpen()
 
@@ -98,8 +97,6 @@ class AboutDialog : BaseDialogFragment() {
         private const val RADIO_BROWSER_URL = "https://www.radio-browser.info"
 
         private const val WEB_RADIO_URL = "https://jcorporation.github.io/webradiodb"
-
-        private const val SUPPORT_LINK = "https://ko-fi.com/I2I1LGFPH"
 
         private fun setOnClickOnText(context: Context, view: View, viewId: Int, linkUrl: String) {
             view.findTextView(viewId).setOnClickListener {

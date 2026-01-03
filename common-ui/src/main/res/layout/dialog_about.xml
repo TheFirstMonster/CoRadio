@@ -164,14 +164,6 @@
             android:layout_marginBottom="25dp"
             android:background="@color/or_color_blue_light" />
 
-        <ImageView
-            android:id="@+id/about_item_support_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="25dp"
-            android:src="@drawable/support_button" />
-
     </LinearLayout>
 
 </ScrollView>
