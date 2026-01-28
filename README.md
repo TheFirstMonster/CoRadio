@@ -28,9 +28,9 @@ This project is not affiliated with or endorsed by the original project or its c
 * BLUETOOTH, BLUETOOTH_ADMIN, BLUETOOTH_CONNECT - On user's demand only - to handle connection with a Bluetooth device.
 * RECORD_AUDIO - On user's demand only - to use voice search engine on Android TV.
 
-### Delivery files ###
+### Downloads ###
 
-* [Google Play](https://play.google.com/store/apps/details?id=com.yuriy.openradio) - this application is suitable now for the Android Media Browser simulator as well as for the Android Auto.
+* [GitHub Actions](https://github.com/TheFirstMonster/OpenRadio/actions/workflows/android.yml)
 
 **Application is fully compatible with vehicle's system.**
 
