@@ -12,9 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - name: set up JDK 17
-      uses: actions/setup-java@v4
+      uses: actions/setup-java@v5
       with:
         java-version: '17'
         distribution: 'temurin'
@@ -24,3 +24,19 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew assembleDebug
+
+    - name: Upload artifact openradio-debug.apk
+      uses: actions/upload-artifact@v6
+      with:
+        name: openradio-debug.apk
+        path: app/build/outputs/apk/debug/app-debug.apk
+    - name: Upload artifact openradio-tv-debug.apk
+      uses: actions/upload-artifact@v6
+      with:
+        name: openradio-tv-debug.apk
+        path: tv/build/outputs/apk/debug/tv-debug.apk
+    - name: Upload artifact openradio-automotive-debug.apk
+      uses: actions/upload-artifact@v6
+      with:
+        name: openradio-automotive-debug.apk
+        path: automotive/build/outputs/apk/debug/automotive-debug.apk
