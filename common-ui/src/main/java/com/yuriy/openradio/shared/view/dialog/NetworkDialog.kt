@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.view.dialog
+package app.coradio.shared.view.dialog
 
 import android.app.Dialog
 import android.os.Bundle
-import com.yuriy.openradio.shared.R
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommonUi
-import com.yuriy.openradio.shared.dependencies.ServiceCommanderDependency
-import com.yuriy.openradio.shared.model.ServiceCommander
-import com.yuriy.openradio.shared.model.storage.NetworkSettingsStorage
-import com.yuriy.openradio.shared.service.OpenRadioService
-import com.yuriy.openradio.shared.utils.findCheckBox
+import app.coradio.shared.R
+import app.coradio.shared.dependencies.DependencyRegistryCommonUi
+import app.coradio.shared.dependencies.ServiceCommanderDependency
+import app.coradio.shared.model.ServiceCommander
+import app.coradio.shared.model.storage.NetworkSettingsStorage
+import app.coradio.shared.service.CoRadioService
+import app.coradio.shared.utils.findCheckBox
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -61,7 +61,7 @@ class NetworkDialog : BaseDialogFragment(), ServiceCommanderDependency {
         useMobileCheckBox.setOnCheckedChangeListener { _, isChecked ->
             mNetworkSettingsStorage.setUseMobile(isChecked)
             CoroutineScope(Dispatchers.Main).launch {
-                mServiceCommander.sendCommand(OpenRadioService.CMD_NET_CHANGED)
+                mServiceCommander.sendCommand(CoRadioService.CMD_NET_CHANGED)
             }
         }
         return createAlertDialog(view)

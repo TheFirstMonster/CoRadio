@@ -1,4 +1,4 @@
-package com.yuriy.openradio.automotive.ui
+package app.coradio.automotive.ui
 
 /**
  * // TODO: Transfer all business logic from Media Activity here.

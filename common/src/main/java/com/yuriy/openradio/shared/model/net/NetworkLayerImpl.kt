@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.net
+package app.coradio.shared.model.net
 
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.telephony.TelephonyManager
-import com.yuriy.openradio.R
-import com.yuriy.openradio.shared.broadcast.AbstractReceiver
-import com.yuriy.openradio.shared.broadcast.ConnectivityReceiver
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.SafeToast
+import app.coradio.R
+import app.coradio.shared.broadcast.AbstractReceiver
+import app.coradio.shared.broadcast.ConnectivityReceiver
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.SafeToast
 
 class NetworkLayerImpl(private val mConnectivityManager: ConnectivityManager) : NetworkLayer {
 

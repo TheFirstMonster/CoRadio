@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yuriy.openradio.shared.model.net
+package app.coradio.shared.model.net
 
 import android.content.Context
 import android.net.Uri
 import androidx.core.util.Pair
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.AppUtils
-import com.yuriy.openradio.shared.utils.NetUtils
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppUtils
+import app.coradio.shared.utils.NetUtils
 import java.io.BufferedInputStream
 import java.io.ByteArrayOutputStream
 import java.io.IOException

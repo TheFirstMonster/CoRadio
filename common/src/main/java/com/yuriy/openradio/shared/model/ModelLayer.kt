@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model
+package app.coradio.shared.model
 
 import android.net.Uri
-import com.yuriy.openradio.shared.model.media.Category
-import com.yuriy.openradio.shared.model.media.RadioStation
-import com.yuriy.openradio.shared.model.translation.MediaIdBuilder
-import com.yuriy.openradio.shared.service.location.Country
+import app.coradio.shared.model.media.Category
+import app.coradio.shared.model.media.RadioStation
+import app.coradio.shared.model.translation.MediaIdBuilder
+import app.coradio.shared.service.location.Country
 
 /**
  * Created by Yuriy Chernyshov

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.media
+package app.coradio.shared.model.media
 
 import androidx.media3.common.MediaItem
 

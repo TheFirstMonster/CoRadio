@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.view.dialog
+package app.coradio.shared.view.dialog
 
 import android.app.Dialog
 import android.os.Bundle
@@ -25,28 +25,28 @@ import android.widget.CompoundButton
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.SeekBar
-import com.yuriy.openradio.shared.R
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommonUi
-import com.yuriy.openradio.shared.dependencies.LoggingLayerDependency
-import com.yuriy.openradio.shared.dependencies.MediaPresenterDependency
-import com.yuriy.openradio.shared.model.logging.LoggingLayer
-import com.yuriy.openradio.shared.model.storage.AppPreferencesManager
-import com.yuriy.openradio.shared.permission.PermissionChecker
-import com.yuriy.openradio.shared.presenter.MediaPresenter
-import com.yuriy.openradio.shared.service.OpenRadioService
-import com.yuriy.openradio.shared.service.OpenRadioStore
-import com.yuriy.openradio.shared.service.location.LocationService
-import com.yuriy.openradio.shared.utils.AppUtils
-import com.yuriy.openradio.shared.utils.SafeToast
-import com.yuriy.openradio.shared.utils.findButton
-import com.yuriy.openradio.shared.utils.findCheckBox
-import com.yuriy.openradio.shared.utils.findEditText
-import com.yuriy.openradio.shared.utils.findSeekBar
-import com.yuriy.openradio.shared.utils.findSpinner
-import com.yuriy.openradio.shared.utils.findTextView
-import com.yuriy.openradio.shared.utils.gone
-import com.yuriy.openradio.shared.utils.visible
-import com.yuriy.openradio.shared.view.list.CountriesArrayAdapter
+import app.coradio.shared.R
+import app.coradio.shared.dependencies.DependencyRegistryCommonUi
+import app.coradio.shared.dependencies.LoggingLayerDependency
+import app.coradio.shared.dependencies.MediaPresenterDependency
+import app.coradio.shared.model.logging.LoggingLayer
+import app.coradio.shared.model.storage.AppPreferencesManager
+import app.coradio.shared.permission.PermissionChecker
+import app.coradio.shared.presenter.MediaPresenter
+import app.coradio.shared.service.CoRadioService
+import app.coradio.shared.service.CoRadioStore
+import app.coradio.shared.service.location.LocationService
+import app.coradio.shared.utils.AppUtils
+import app.coradio.shared.utils.SafeToast
+import app.coradio.shared.utils.findButton
+import app.coradio.shared.utils.findCheckBox
+import app.coradio.shared.utils.findEditText
+import app.coradio.shared.utils.findSeekBar
+import app.coradio.shared.utils.findSpinner
+import app.coradio.shared.utils.findTextView
+import app.coradio.shared.utils.gone
+import app.coradio.shared.utils.visible
+import app.coradio.shared.view.list.CountriesArrayAdapter
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -105,7 +105,7 @@ class GeneralSettingsDialog : BaseDialogFragment(), MediaPresenterDependency, Lo
         mUserAgentEditView.isEnabled = isCustomUserAgent
         val masterVolumeSeekBar = view.findSeekBar(R.id.master_vol_seek_bar)
         masterVolumeSeekBar.progress =
-            AppPreferencesManager.getMasterVolume(context, OpenRadioService.MASTER_VOLUME_DEFAULT)
+            AppPreferencesManager.getMasterVolume(context, CoRadioService.MASTER_VOLUME_DEFAULT)
         masterVolumeSeekBar.setOnSeekBarChangeListener(
             object : SeekBar.OnSeekBarChangeListener {
                 override fun onProgressChanged(
@@ -122,9 +122,9 @@ class GeneralSettingsDialog : BaseDialogFragment(), MediaPresenterDependency, Lo
 
                 override fun onStopTrackingTouch(seekBar: SeekBar) {
                     CoroutineScope(Dispatchers.Main).launch {
-                        val bundle = OpenRadioStore.makeMasterVolumeChangedBundle(seekBar.progress)
+                        val bundle = CoRadioStore.makeMasterVolumeChangedBundle(seekBar.progress)
                         mMediaPresenter.getServiceCommander()
-                            .sendCommand(OpenRadioService.CMD_MASTER_VOLUME_CHANGED, bundle)
+                            .sendCommand(CoRadioService.CMD_MASTER_VOLUME_CHANGED, bundle)
                     }
                 }
             }
@@ -145,7 +145,7 @@ class GeneralSettingsDialog : BaseDialogFragment(), MediaPresenterDependency, Lo
         val clearCache = view.findButton(R.id.clear_cache_btn)
         clearCache.setOnClickListener {
             CoroutineScope(Dispatchers.Main).launch {
-                mMediaPresenter.getServiceCommander().sendCommand(OpenRadioService.CMD_CLEAR_CACHE)
+                mMediaPresenter.getServiceCommander().sendCommand(CoRadioService.CMD_CLEAR_CACHE)
             }
         }
         val array = LocationService.getCountriesWithLocation(context)

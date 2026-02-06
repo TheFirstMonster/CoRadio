@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.utils
+package app.coradio.shared.utils
 
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
 import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata
-import com.yuriy.openradio.R
-import com.yuriy.openradio.shared.model.media.Category
-import com.yuriy.openradio.shared.model.media.MediaId
-import com.yuriy.openradio.shared.model.media.MediaStream
-import com.yuriy.openradio.shared.model.media.RadioStation
-import com.yuriy.openradio.shared.model.media.getStreamBitrate
-import com.yuriy.openradio.shared.model.media.getStreamUrlFixed
-import com.yuriy.openradio.shared.service.location.Country
-import com.yuriy.openradio.shared.service.location.LocationService
+import app.coradio.R
+import app.coradio.shared.model.media.Category
+import app.coradio.shared.model.media.MediaId
+import app.coradio.shared.model.media.MediaStream
+import app.coradio.shared.model.media.RadioStation
+import app.coradio.shared.model.media.getStreamBitrate
+import app.coradio.shared.model.media.getStreamUrlFixed
+import app.coradio.shared.service.location.Country
+import app.coradio.shared.service.location.LocationService
 import java.util.Locale
 
 object MediaItemBuilder {

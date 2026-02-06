@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.view.dialog
+package app.coradio.shared.view.dialog
 
 import android.app.Dialog
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ProgressBar
 import androidx.fragment.app.FragmentManager
-import com.yuriy.openradio.shared.R
-import com.yuriy.openradio.shared.dependencies.CloudStoreManagerDependency
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommonUi
-import com.yuriy.openradio.shared.model.storage.CloudStoreManager
-import com.yuriy.openradio.shared.utils.SafeToast
-import com.yuriy.openradio.shared.utils.findButton
-import com.yuriy.openradio.shared.utils.findEditText
-import com.yuriy.openradio.shared.utils.findProgressBar
-import com.yuriy.openradio.shared.utils.gone
-import com.yuriy.openradio.shared.utils.visible
+import app.coradio.shared.R
+import app.coradio.shared.dependencies.CloudStoreManagerDependency
+import app.coradio.shared.dependencies.DependencyRegistryCommonUi
+import app.coradio.shared.model.storage.CloudStoreManager
+import app.coradio.shared.utils.SafeToast
+import app.coradio.shared.utils.findButton
+import app.coradio.shared.utils.findEditText
+import app.coradio.shared.utils.findProgressBar
+import app.coradio.shared.utils.gone
+import app.coradio.shared.utils.visible
 import java.io.Serializable
 
 /**

@@ -27,7 +27,7 @@
         <receiver android:name=".broadcast.AppCloseReceiver"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.yuriy.openradio.action.CLOSE_APP" />
+                <action android:name="app.coradio.action.CLOSE_APP" />
             </intent-filter>
         </receiver>
 

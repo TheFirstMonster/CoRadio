@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.service.location
+package app.coradio.shared.service.location
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -36,11 +36,11 @@ import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.Priority
-import com.yuriy.openradio.R
-import com.yuriy.openradio.shared.permission.PermissionChecker
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.AppUtils
-import com.yuriy.openradio.shared.utils.IntentUtils
+import app.coradio.R
+import app.coradio.shared.permission.PermissionChecker
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppUtils
+import app.coradio.shared.utils.IntentUtils
 import java.util.Locale
 import java.util.TreeMap
 import java.util.concurrent.atomic.AtomicInteger

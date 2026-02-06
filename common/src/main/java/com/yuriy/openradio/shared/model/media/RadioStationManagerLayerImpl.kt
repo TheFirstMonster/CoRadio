@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.media
+package app.coradio.shared.model.media
 
 import android.content.Context
-import com.yuriy.openradio.shared.model.ModelLayer
-import com.yuriy.openradio.shared.model.net.UrlLayer
-import com.yuriy.openradio.shared.model.storage.DeviceLocalsStorage
-import com.yuriy.openradio.shared.model.storage.FavoritesStorage
-import com.yuriy.openradio.shared.model.storage.images.ImagesPersistenceLayer
-import com.yuriy.openradio.shared.model.storage.images.ImagesStore
-import com.yuriy.openradio.shared.utils.AppUtils
-import com.yuriy.openradio.shared.utils.RadioStationValidator
+import app.coradio.shared.model.ModelLayer
+import app.coradio.shared.model.net.UrlLayer
+import app.coradio.shared.model.storage.DeviceLocalsStorage
+import app.coradio.shared.model.storage.FavoritesStorage
+import app.coradio.shared.model.storage.images.ImagesPersistenceLayer
+import app.coradio.shared.model.storage.images.ImagesStore
+import app.coradio.shared.utils.AppUtils
+import app.coradio.shared.utils.RadioStationValidator
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

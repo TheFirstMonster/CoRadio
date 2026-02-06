@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.view.dialog
+package app.coradio.shared.view.dialog
 
 import android.annotation.SuppressLint
 import android.app.Dialog
@@ -25,15 +25,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.LinearLayout
 import android.widget.RadioButton
-import com.yuriy.openradio.shared.R
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommon
-import com.yuriy.openradio.shared.dependencies.SourcesLayerDependency
-import com.yuriy.openradio.shared.model.source.Source
-import com.yuriy.openradio.shared.model.source.SourcesLayer
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.findImageButton
-import com.yuriy.openradio.shared.utils.gone
-import com.yuriy.openradio.shared.utils.visible
+import app.coradio.shared.R
+import app.coradio.shared.dependencies.DependencyRegistryCommon
+import app.coradio.shared.dependencies.SourcesLayerDependency
+import app.coradio.shared.model.source.Source
+import app.coradio.shared.model.source.SourcesLayer
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.findImageButton
+import app.coradio.shared.utils.gone
+import app.coradio.shared.utils.visible
 
 /**
  *

@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.tv.view.activity
+package app.coradio.tv.view.activity
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
 import androidx.fragment.app.FragmentActivity
-import com.yuriy.openradio.shared.utils.AppUtils
-import com.yuriy.openradio.tv.R
-import com.yuriy.openradio.tv.view.fragment.TvSearchFragment
+import app.coradio.shared.utils.AppUtils
+import app.coradio.tv.R
+import app.coradio.tv.view.fragment.TvSearchFragment
 
 /**
  *

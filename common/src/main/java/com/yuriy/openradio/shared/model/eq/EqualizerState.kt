@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.eq
+package app.coradio.shared.model.eq
 
 import android.media.audiofx.Equalizer
-import com.yuriy.openradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppLogger
 
 /**
  * Class that represents state of selected Equalizer.

@@ -18,8 +18,8 @@ package wseemann.media.jplaylistparser.parser
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.yuriy.openradio.shared.utils.AppUtils
-import com.yuriy.openradio.shared.utils.NetUtils
+import app.coradio.shared.utils.AppUtils
+import app.coradio.shared.utils.NetUtils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

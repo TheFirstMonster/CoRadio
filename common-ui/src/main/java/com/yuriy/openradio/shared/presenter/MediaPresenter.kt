@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.presenter
+package app.coradio.shared.presenter
 
 import android.os.Bundle
 import android.view.View
@@ -24,10 +24,10 @@ import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.gms.cast.framework.CastContext
-import com.yuriy.openradio.shared.broadcast.AppLocalReceiverCallback
-import com.yuriy.openradio.shared.model.ServiceCommander
-import com.yuriy.openradio.shared.model.media.MediaItemsSubscription
-import com.yuriy.openradio.shared.view.list.MediaItemsAdapter
+import app.coradio.shared.broadcast.AppLocalReceiverCallback
+import app.coradio.shared.model.ServiceCommander
+import app.coradio.shared.model.media.MediaItemsSubscription
+import app.coradio.shared.view.list.MediaItemsAdapter
 
 interface MediaPresenter {
 

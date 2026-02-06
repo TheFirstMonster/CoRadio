@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.mobile.view.list
+package app.coradio.mobile.view.list
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -25,14 +25,14 @@ import androidx.core.content.ContextCompat
 import androidx.media3.common.MediaItem
 import androidx.media3.common.util.UnstableApi
 import com.xenione.libs.swipemaker.SwipeLayout
-import com.yuriy.openradio.mobile.R
-import com.yuriy.openradio.shared.model.media.MediaId
-import com.yuriy.openradio.shared.presenter.MediaPresenter
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.MediaItemHelper
-import com.yuriy.openradio.shared.utils.gone
-import com.yuriy.openradio.shared.view.list.MediaItemViewHolder
-import com.yuriy.openradio.shared.view.list.MediaItemsAdapter
+import app.coradio.mobile.R
+import app.coradio.shared.model.media.MediaId
+import app.coradio.shared.presenter.MediaPresenter
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.MediaItemHelper
+import app.coradio.shared.utils.gone
+import app.coradio.shared.view.list.MediaItemViewHolder
+import app.coradio.shared.view.list.MediaItemsAdapter
 
 /**
  * Created by Yuriy Chernyshov
@@ -62,7 +62,7 @@ class MobileMediaItemsAdapter(private var mContext: Context, private val mMediaP
             MediaItemHelper.getBitrateField(mediaItem), holder.mBitrateView, isPlayable
         )
         holder.mFavoriteCheckView.buttonDrawable = AppCompatResources.getDrawable(
-            mContext, com.yuriy.openradio.R.drawable.src_favorite
+            mContext, app.coradio.R.drawable.src_favorite
         )
         if (isPlayable) {
             handleFavoriteAction(

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.view.dialog
+package app.coradio.shared.view.dialog
 
-import com.yuriy.openradio.shared.model.media.RadioStation
-import com.yuriy.openradio.shared.model.storage.DeviceLocalsStorage
-import com.yuriy.openradio.shared.model.storage.FavoritesStorage
+import app.coradio.shared.model.media.RadioStation
+import app.coradio.shared.model.storage.DeviceLocalsStorage
+import app.coradio.shared.model.storage.FavoritesStorage
 
 class EditStationPresenterImpl(private val mFavoritesStorage: FavoritesStorage,
                                private val mDeviceLocalsStorage: DeviceLocalsStorage) : EditStationPresenter {

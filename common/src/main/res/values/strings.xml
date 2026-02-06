@@ -15,8 +15,8 @@
     limitations under the License.
 -->
 <resources>
-    <string name="app_name">Open Radio</string>
-    <string name="app_name_user_agent">OpenRadio</string>
+    <string name="app_name">CoRadio</string>
+    <string name="app_name_user_agent">CoRadio</string>
     <string name="user_agent_can_not_apply">Can not apply User Agent</string>
     <string name="ok_label">OK</string>
     <string name="buffering">Buffering</string>

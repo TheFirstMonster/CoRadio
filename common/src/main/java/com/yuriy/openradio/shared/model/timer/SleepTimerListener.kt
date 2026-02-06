@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.timer
+package app.coradio.shared.model.timer
 
 interface SleepTimerListener {
 

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.utils
+package app.coradio.shared.utils
 
-import com.yuriy.openradio.shared.model.media.MediaId
-import com.yuriy.openradio.shared.model.media.MediaId.getCountryCode
-import com.yuriy.openradio.shared.model.media.MediaId.getId
-import com.yuriy.openradio.shared.service.location.Country
+import app.coradio.shared.model.media.MediaId
+import app.coradio.shared.model.media.MediaId.getCountryCode
+import app.coradio.shared.model.media.MediaId.getId
+import app.coradio.shared.service.location.Country
 import junit.framework.TestCase
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers

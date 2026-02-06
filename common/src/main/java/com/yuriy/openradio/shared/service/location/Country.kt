@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.service.location
+package app.coradio.shared.service.location
 
 /**
  * Created by Chernyshov Yurii

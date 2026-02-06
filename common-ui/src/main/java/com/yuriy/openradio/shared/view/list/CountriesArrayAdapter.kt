@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.view.list
+package app.coradio.shared.view.list
 
 import android.content.Context
 import android.view.View
-import com.yuriy.openradio.shared.R
-import com.yuriy.openradio.shared.service.location.Country
-import com.yuriy.openradio.shared.utils.findTextView
+import app.coradio.shared.R
+import app.coradio.shared.service.location.Country
+import app.coradio.shared.utils.findTextView
 
 class CountriesArrayAdapter(context: Context, private val items: Array<Country>)
     : BaseArrayAdapter<Country, CountriesArrayAdapter.ViewHolderImp>(context, items) {

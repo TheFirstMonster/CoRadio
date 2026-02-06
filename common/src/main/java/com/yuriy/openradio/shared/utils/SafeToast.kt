@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.utils
+package app.coradio.shared.utils
 
 import android.content.Context
 import android.widget.Toast

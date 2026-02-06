@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.broadcast
+package app.coradio.shared.broadcast
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import androidx.core.content.ContextCompat
-import com.yuriy.openradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppLogger
 
 /**
  * Created by Chernyshov Yurii

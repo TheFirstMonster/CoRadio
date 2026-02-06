@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.tv.view.activity
+package app.coradio.tv.view.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -25,35 +25,35 @@ import androidx.annotation.MainThread
 import androidx.fragment.app.FragmentActivity
 import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata
-import com.yuriy.openradio.shared.broadcast.AppLocalReceiverCallback
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommon
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommonUi
-import com.yuriy.openradio.shared.dependencies.MediaPresenterDependency
-import com.yuriy.openradio.shared.model.media.MediaId
-import com.yuriy.openradio.shared.model.media.MediaItemsSubscription
-import com.yuriy.openradio.shared.model.media.PlaybackState
-import com.yuriy.openradio.shared.model.media.getStreamBitrate
-import com.yuriy.openradio.shared.model.media.isInvalid
-import com.yuriy.openradio.shared.presenter.MediaPresenter
-import com.yuriy.openradio.shared.presenter.MediaPresenterListener
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.IntentUtils
-import com.yuriy.openradio.shared.utils.SafeToast
-import com.yuriy.openradio.shared.utils.UiUtils
-import com.yuriy.openradio.shared.utils.findCheckBox
-import com.yuriy.openradio.shared.utils.findImageView
-import com.yuriy.openradio.shared.utils.findTextView
-import com.yuriy.openradio.shared.utils.findView
-import com.yuriy.openradio.shared.utils.gone
-import com.yuriy.openradio.shared.utils.visible
-import com.yuriy.openradio.shared.view.dialog.AddStationDialog
-import com.yuriy.openradio.shared.view.dialog.BaseDialogFragment
-import com.yuriy.openradio.shared.view.dialog.EqualizerDialog
-import com.yuriy.openradio.shared.view.list.MediaItemsAdapter
-import com.yuriy.openradio.tv.R
-import com.yuriy.openradio.tv.dependencies.DependencyRegistryTv
-import com.yuriy.openradio.tv.view.dialog.TvSettingsDialog
-import com.yuriy.openradio.tv.view.list.TvMediaItemsAdapter
+import app.coradio.shared.broadcast.AppLocalReceiverCallback
+import app.coradio.shared.dependencies.DependencyRegistryCommon
+import app.coradio.shared.dependencies.DependencyRegistryCommonUi
+import app.coradio.shared.dependencies.MediaPresenterDependency
+import app.coradio.shared.model.media.MediaId
+import app.coradio.shared.model.media.MediaItemsSubscription
+import app.coradio.shared.model.media.PlaybackState
+import app.coradio.shared.model.media.getStreamBitrate
+import app.coradio.shared.model.media.isInvalid
+import app.coradio.shared.presenter.MediaPresenter
+import app.coradio.shared.presenter.MediaPresenterListener
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.IntentUtils
+import app.coradio.shared.utils.SafeToast
+import app.coradio.shared.utils.UiUtils
+import app.coradio.shared.utils.findCheckBox
+import app.coradio.shared.utils.findImageView
+import app.coradio.shared.utils.findTextView
+import app.coradio.shared.utils.findView
+import app.coradio.shared.utils.gone
+import app.coradio.shared.utils.visible
+import app.coradio.shared.view.dialog.AddStationDialog
+import app.coradio.shared.view.dialog.BaseDialogFragment
+import app.coradio.shared.view.dialog.EqualizerDialog
+import app.coradio.shared.view.list.MediaItemsAdapter
+import app.coradio.tv.R
+import app.coradio.tv.dependencies.DependencyRegistryTv
+import app.coradio.tv.view.dialog.TvSettingsDialog
+import app.coradio.tv.view.list.TvMediaItemsAdapter
 
 /*
  * Main TV Activity class that loads main TV fragment.
@@ -298,7 +298,7 @@ class TvMainActivity : FragmentActivity(), MediaPresenterDependency {
         override fun onError(parentId: String) {
             SafeToast.showAnyThread(
                 applicationContext,
-                getString(com.yuriy.openradio.shared.R.string.error_loading_media)
+                getString(app.coradio.shared.R.string.error_loading_media)
             )
         }
     }

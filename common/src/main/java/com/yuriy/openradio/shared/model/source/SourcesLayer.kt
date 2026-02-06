@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.source
+package app.coradio.shared.model.source
 
 interface SourcesLayer {
 

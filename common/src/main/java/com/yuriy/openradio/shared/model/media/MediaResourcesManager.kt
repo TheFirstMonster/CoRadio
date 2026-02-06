@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.media
+package app.coradio.shared.model.media
 
 import android.content.ComponentName
 import android.content.Context
@@ -39,10 +39,10 @@ import com.google.common.collect.ImmutableList
 import com.google.common.util.concurrent.Futures
 import com.google.common.util.concurrent.ListenableFuture
 import com.google.common.util.concurrent.MoreExecutors
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommon
-import com.yuriy.openradio.shared.service.OpenRadioService
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.AppUtils
+import app.coradio.shared.dependencies.DependencyRegistryCommon
+import app.coradio.shared.service.CoRadioService
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppUtils
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -90,7 +90,7 @@ class MediaResourcesManager(context: Context, className: String, private val mLi
             mMediaBrowser =
                 MediaBrowser.Builder(
                     context,
-                    SessionToken(context, ComponentName(context, OpenRadioService::class.java))
+                    SessionToken(context, ComponentName(context, CoRadioService::class.java))
                 )
                     .setListener(BrowserListener())
                     .buildAsync()

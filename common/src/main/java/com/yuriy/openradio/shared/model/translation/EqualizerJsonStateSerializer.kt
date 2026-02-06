@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yuriy.openradio.shared.model.translation
+package app.coradio.shared.model.translation
 
-import com.yuriy.openradio.shared.model.eq.EqualizerState
-import com.yuriy.openradio.shared.utils.AppLogger
+import app.coradio.shared.model.eq.EqualizerState
+import app.coradio.shared.utils.AppLogger
 import org.json.JSONObject
 
 /**

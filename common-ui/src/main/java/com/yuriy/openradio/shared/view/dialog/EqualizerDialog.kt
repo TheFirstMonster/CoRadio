@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.view.dialog
+package app.coradio.shared.view.dialog
 
 import android.app.Dialog
 import android.graphics.Color
@@ -28,13 +28,13 @@ import android.widget.ArrayAdapter
 import android.widget.LinearLayout
 import android.widget.SeekBar
 import android.widget.TextView
-import com.yuriy.openradio.shared.R
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommonUi
-import com.yuriy.openradio.shared.model.eq.EqualizerState
-import com.yuriy.openradio.shared.utils.findSpinner
-import com.yuriy.openradio.shared.utils.findTextView
-import com.yuriy.openradio.shared.utils.gone
-import com.yuriy.openradio.shared.utils.visible
+import app.coradio.shared.R
+import app.coradio.shared.dependencies.DependencyRegistryCommonUi
+import app.coradio.shared.model.eq.EqualizerState
+import app.coradio.shared.utils.findSpinner
+import app.coradio.shared.utils.findTextView
+import app.coradio.shared.utils.gone
+import app.coradio.shared.utils.visible
 
 class EqualizerDialog : BaseDialogFragment() {
 

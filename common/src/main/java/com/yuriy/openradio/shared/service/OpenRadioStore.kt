@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.service
+package app.coradio.shared.service
 
 import android.os.Bundle
-import com.yuriy.openradio.shared.model.media.MediaId
-import com.yuriy.openradio.shared.utils.AppUtils
+import app.coradio.shared.model.media.MediaId
+import app.coradio.shared.utils.AppUtils
 
 /**
- * [OpenRadioStore] is the object that provides ability to perform one way communication with [OpenRadioService].
+ * [CoRadioStore] is the object that provides ability to perform one way communication with [CoRadioService].
  */
-object OpenRadioStore {
+object CoRadioStore {
 
     const val EXTRA_KEY_MEDIA_ID = "EXTRA_KEY_MEDIA_ID"
     const val EXTRA_KEY_MEDIA_IDS = "EXTRA_KEY_MEDIA_IDS"
@@ -56,10 +56,10 @@ object OpenRadioStore {
     }
 
     /**
-     * Factory method to make [Bundle] to update whether [com.yuriy.openradio.shared.model.media.RadioStation]
+     * Factory method to make [Bundle] to update whether [app.coradio.shared.model.media.RadioStation]
      * is Favorite.
      *
-     * @param mediaId Media Id of the [com.yuriy.openradio.shared.model.media.RadioStation].
+     * @param mediaId Media Id of the [app.coradio.shared.model.media.RadioStation].
      * @param isFavorite Whether Radio station is Favorite or not.
      * @return [Bundle].
      */

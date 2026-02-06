@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yuriy.openradio.shared.view.dialog
+package app.coradio.shared.view.dialog
 
 import android.annotation.SuppressLint
 import android.app.Dialog
@@ -23,12 +23,12 @@ import android.text.TextUtils
 import android.widget.EditText
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.exoplayer.DefaultLoadControl
-import com.yuriy.openradio.shared.R
-import com.yuriy.openradio.shared.model.storage.AppPreferencesManager
-import com.yuriy.openradio.shared.utils.SafeToast.showAnyThread
-import com.yuriy.openradio.shared.utils.findButton
-import com.yuriy.openradio.shared.utils.findEditText
-import com.yuriy.openradio.shared.utils.findTextView
+import app.coradio.shared.R
+import app.coradio.shared.model.storage.AppPreferencesManager
+import app.coradio.shared.utils.SafeToast.showAnyThread
+import app.coradio.shared.utils.findButton
+import app.coradio.shared.utils.findEditText
+import app.coradio.shared.utils.findTextView
 
 /**
  * Created by Yuriy Chernyshov
@@ -55,10 +55,10 @@ class StreamBufferingDialog : BaseDialogFragment() {
         try {
             descView.text = String.format(
                 resources.getString(R.string.stream_buffering_descr),
-                resources.getInteger(com.yuriy.openradio.R.integer.min_buffer_val),
-                resources.getInteger(com.yuriy.openradio.R.integer.max_buffer_val),
-                resources.getInteger(com.yuriy.openradio.R.integer.min_buffer_sec),
-                resources.getInteger(com.yuriy.openradio.R.integer.max_buffer_min)
+                resources.getInteger(app.coradio.R.integer.min_buffer_val),
+                resources.getInteger(app.coradio.R.integer.max_buffer_val),
+                resources.getInteger(app.coradio.R.integer.min_buffer_sec),
+                resources.getInteger(app.coradio.R.integer.max_buffer_min)
             )
         } catch (e: Exception) {
             /* Ignore */
@@ -173,9 +173,9 @@ class StreamBufferingDialog : BaseDialogFragment() {
             } catch (e: NumberFormatException) {
                 return false
             }
-            return if (valueInt > context.resources.getInteger(com.yuriy.openradio.R.integer.max_buffer_val)) {
+            return if (valueInt > context.resources.getInteger(app.coradio.R.integer.max_buffer_val)) {
                 false
-            } else valueInt >= context.resources.getInteger(com.yuriy.openradio.R.integer.min_buffer_val)
+            } else valueInt >= context.resources.getInteger(app.coradio.R.integer.min_buffer_val)
         }
 
         /**

@@ -15,7 +15,7 @@
  */
 package wseemann.media.jplaylistparser.parser.pls
 
-import com.yuriy.openradio.shared.utils.AppUtils
+import app.coradio.shared.utils.AppUtils
 import wseemann.media.jplaylistparser.mime.MediaType
 import wseemann.media.jplaylistparser.mime.MediaType.Companion.audio
 import wseemann.media.jplaylistparser.parser.AbstractParser

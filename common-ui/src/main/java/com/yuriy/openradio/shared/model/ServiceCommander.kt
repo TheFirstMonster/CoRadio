@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model
+package app.coradio.shared.model
 
 import android.os.Bundle
 

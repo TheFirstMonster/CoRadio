@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.utils
+package app.coradio.shared.utils
 
-import com.yuriy.openradio.shared.model.media.MediaId
-import com.yuriy.openradio.shared.model.media.RadioStation
-import com.yuriy.openradio.shared.model.storage.DeviceLocalsStorage
-import com.yuriy.openradio.shared.model.storage.FavoritesStorage
+import app.coradio.shared.model.media.MediaId
+import app.coradio.shared.model.media.RadioStation
+import app.coradio.shared.model.storage.DeviceLocalsStorage
+import app.coradio.shared.model.storage.FavoritesStorage
 
 object SortUtils {
 

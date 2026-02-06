@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yuriy.openradio.shared.view.dialog
+package app.coradio.shared.view.dialog
 
 import android.app.Dialog
 import android.os.Bundle
-import com.yuriy.openradio.shared.R
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommonUi
-import com.yuriy.openradio.shared.utils.AppUtils
-import com.yuriy.openradio.shared.utils.findButton
-import com.yuriy.openradio.shared.utils.findTextView
+import app.coradio.shared.R
+import app.coradio.shared.dependencies.DependencyRegistryCommonUi
+import app.coradio.shared.utils.AppUtils
+import app.coradio.shared.utils.findButton
+import app.coradio.shared.utils.findTextView
 
 /**
  * Created by Yuriy Chernyshov

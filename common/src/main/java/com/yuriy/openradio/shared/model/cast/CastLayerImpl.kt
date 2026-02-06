@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yuriy.openradio.shared.model.cast
+package app.coradio.shared.model.cast
 
 import android.content.Context
 import com.google.android.gms.cast.framework.CastContext
-import com.yuriy.openradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppLogger
 import java.util.concurrent.Executors
 
 class CastLayerImpl(private val mContext: Context) : CastLayer {

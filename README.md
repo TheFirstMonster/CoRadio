@@ -30,7 +30,7 @@ This project is not affiliated with or endorsed by the original project or its c
 
 ### Downloads ###
 
-* [GitHub Actions](https://github.com/TheFirstMonster/OpenRadio/actions/workflows/android.yml)
+* [GitHub Actions](https://github.com/TheFirstMonster/CoRadio/actions/workflows/android.yml)
 
 **Application is fully compatible with vehicle's system.**
 

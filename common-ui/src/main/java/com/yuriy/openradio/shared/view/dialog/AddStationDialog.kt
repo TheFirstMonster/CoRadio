@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.view.dialog
+package app.coradio.shared.view.dialog
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.yuriy.openradio.shared.R
-import com.yuriy.openradio.shared.model.media.RadioStationToAdd
+import app.coradio.shared.R
+import app.coradio.shared.model.media.RadioStationToAdd
 
 /**
  * Created by Yuriy Chernyshov

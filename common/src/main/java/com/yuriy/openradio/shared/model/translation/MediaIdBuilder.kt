@@ -1,4 +1,4 @@
-package com.yuriy.openradio.shared.model.translation
+package app.coradio.shared.model.translation
 
 interface MediaIdBuilder {
 

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared
+package app.coradio.shared
 
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommon
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommonUi
-import com.yuriy.openradio.shared.dependencies.SleepTimerModelDependency
-import com.yuriy.openradio.shared.model.timer.SleepTimerModel
+import app.coradio.shared.dependencies.DependencyRegistryCommon
+import app.coradio.shared.dependencies.DependencyRegistryCommonUi
+import app.coradio.shared.dependencies.SleepTimerModelDependency
+import app.coradio.shared.model.timer.SleepTimerModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

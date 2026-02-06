@@ -1,11 +1,11 @@
-package com.yuriy.openradio.mobile.view.list
+package app.coradio.mobile.view.list
 
 import android.content.Context
 import android.util.AttributeSet
 import com.xenione.libs.swipemaker.AbsCoordinatorLayout
 import com.xenione.libs.swipemaker.SwipeLayout
-import com.yuriy.openradio.mobile.R
-import com.yuriy.openradio.shared.utils.findView
+import app.coradio.mobile.R
+import app.coradio.shared.utils.findView
 
 /**
  * Created on 06/04/16.

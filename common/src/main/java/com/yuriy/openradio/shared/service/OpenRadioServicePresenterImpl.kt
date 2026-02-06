@@ -1,47 +1,47 @@
-package com.yuriy.openradio.shared.service
+package app.coradio.shared.service
 
 import android.content.Context
-import com.yuriy.openradio.shared.model.ModelLayer
-import com.yuriy.openradio.shared.model.cast.CastLayer
-import com.yuriy.openradio.shared.model.eq.EqualizerLayer
-import com.yuriy.openradio.shared.model.media.Category
-import com.yuriy.openradio.shared.model.media.MediaId
-import com.yuriy.openradio.shared.model.media.RadioStation
-import com.yuriy.openradio.shared.model.media.RadioStationManagerLayerListener
-import com.yuriy.openradio.shared.model.media.item.MediaItemAllCategories
-import com.yuriy.openradio.shared.model.media.item.MediaItemBrowseCar
-import com.yuriy.openradio.shared.model.media.item.MediaItemChildCategories
-import com.yuriy.openradio.shared.model.media.item.MediaItemCommand
-import com.yuriy.openradio.shared.model.media.item.MediaItemCountriesList
-import com.yuriy.openradio.shared.model.media.item.MediaItemCountryStations
-import com.yuriy.openradio.shared.model.media.item.MediaItemFavoritesList
-import com.yuriy.openradio.shared.model.media.item.MediaItemFeatured
-import com.yuriy.openradio.shared.model.media.item.MediaItemLocalsList
-import com.yuriy.openradio.shared.model.media.item.MediaItemNewStations
-import com.yuriy.openradio.shared.model.media.item.MediaItemPopularStations
-import com.yuriy.openradio.shared.model.media.item.MediaItemRoot
-import com.yuriy.openradio.shared.model.media.item.MediaItemRootCar
-import com.yuriy.openradio.shared.model.media.item.MediaItemSearchFromApp
-import com.yuriy.openradio.shared.model.media.item.MediaItemSearchFromService
-import com.yuriy.openradio.shared.model.net.NetworkLayer
-import com.yuriy.openradio.shared.model.net.NetworkMonitorListener
-import com.yuriy.openradio.shared.model.net.UrlLayer
-import com.yuriy.openradio.shared.model.source.Source
-import com.yuriy.openradio.shared.model.storage.DeviceLocalsStorage
-import com.yuriy.openradio.shared.model.storage.FavoritesStorage
-import com.yuriy.openradio.shared.model.storage.LatestRadioStationStorage
-import com.yuriy.openradio.shared.model.storage.LocationStorage
-import com.yuriy.openradio.shared.model.storage.NetworkSettingsStorage
-import com.yuriy.openradio.shared.model.storage.cache.api.ApiCache
-import com.yuriy.openradio.shared.model.storage.images.ImagesPersistenceLayer
-import com.yuriy.openradio.shared.model.timer.SleepTimerModel
-import com.yuriy.openradio.shared.model.translation.MediaIdBuilder
-import com.yuriy.openradio.shared.model.translation.MediaIdBuilderDefault
-import com.yuriy.openradio.shared.service.location.Country
-import com.yuriy.openradio.shared.utils.SortUtils
+import app.coradio.shared.model.ModelLayer
+import app.coradio.shared.model.cast.CastLayer
+import app.coradio.shared.model.eq.EqualizerLayer
+import app.coradio.shared.model.media.Category
+import app.coradio.shared.model.media.MediaId
+import app.coradio.shared.model.media.RadioStation
+import app.coradio.shared.model.media.RadioStationManagerLayerListener
+import app.coradio.shared.model.media.item.MediaItemAllCategories
+import app.coradio.shared.model.media.item.MediaItemBrowseCar
+import app.coradio.shared.model.media.item.MediaItemChildCategories
+import app.coradio.shared.model.media.item.MediaItemCommand
+import app.coradio.shared.model.media.item.MediaItemCountriesList
+import app.coradio.shared.model.media.item.MediaItemCountryStations
+import app.coradio.shared.model.media.item.MediaItemFavoritesList
+import app.coradio.shared.model.media.item.MediaItemFeatured
+import app.coradio.shared.model.media.item.MediaItemLocalsList
+import app.coradio.shared.model.media.item.MediaItemNewStations
+import app.coradio.shared.model.media.item.MediaItemPopularStations
+import app.coradio.shared.model.media.item.MediaItemRoot
+import app.coradio.shared.model.media.item.MediaItemRootCar
+import app.coradio.shared.model.media.item.MediaItemSearchFromApp
+import app.coradio.shared.model.media.item.MediaItemSearchFromService
+import app.coradio.shared.model.net.NetworkLayer
+import app.coradio.shared.model.net.NetworkMonitorListener
+import app.coradio.shared.model.net.UrlLayer
+import app.coradio.shared.model.source.Source
+import app.coradio.shared.model.storage.DeviceLocalsStorage
+import app.coradio.shared.model.storage.FavoritesStorage
+import app.coradio.shared.model.storage.LatestRadioStationStorage
+import app.coradio.shared.model.storage.LocationStorage
+import app.coradio.shared.model.storage.NetworkSettingsStorage
+import app.coradio.shared.model.storage.cache.api.ApiCache
+import app.coradio.shared.model.storage.images.ImagesPersistenceLayer
+import app.coradio.shared.model.timer.SleepTimerModel
+import app.coradio.shared.model.translation.MediaIdBuilder
+import app.coradio.shared.model.translation.MediaIdBuilderDefault
+import app.coradio.shared.service.location.Country
+import app.coradio.shared.utils.SortUtils
 import java.util.TreeSet
 
-class OpenRadioServicePresenterImpl(
+class CoRadioServicePresenterImpl(
     isCar: Boolean,
     source: Source,
     private val mUrlLayer: UrlLayer,
@@ -60,7 +60,7 @@ class OpenRadioServicePresenterImpl(
     private val mCountriesCache:TreeSet<Country>,
     private val mListener: RadioStationManagerLayerListener,
     private val mCastLayer: CastLayer
-) : OpenRadioServicePresenter {
+) : CoRadioServicePresenter {
 
     /**
      * Map of the Media Item commands that responsible for the Media Items List creation.

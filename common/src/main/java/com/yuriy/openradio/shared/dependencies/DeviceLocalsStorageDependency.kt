@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.dependencies
+package app.coradio.shared.dependencies
 
-import com.yuriy.openradio.shared.model.storage.DeviceLocalsStorage
+import app.coradio.shared.model.storage.DeviceLocalsStorage
 
 interface DeviceLocalsStorageDependency {
 

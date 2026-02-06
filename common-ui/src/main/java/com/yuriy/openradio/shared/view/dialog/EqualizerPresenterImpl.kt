@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.view.dialog
+package app.coradio.shared.view.dialog
 
-import com.yuriy.openradio.shared.model.eq.EqualizerLayer
-import com.yuriy.openradio.shared.model.eq.EqualizerState
+import app.coradio.shared.model.eq.EqualizerLayer
+import app.coradio.shared.model.eq.EqualizerState
 
 class EqualizerPresenterImpl(
     private val mEqualizer: EqualizerLayer

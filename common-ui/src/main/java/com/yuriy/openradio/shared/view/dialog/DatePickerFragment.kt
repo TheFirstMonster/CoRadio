@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.view.dialog
+package app.coradio.shared.view.dialog
 
 import android.app.DatePickerDialog
 import android.app.Dialog
 import android.os.Bundle
 import android.widget.DatePicker
 import androidx.fragment.app.DialogFragment
-import com.yuriy.openradio.shared.R
-import com.yuriy.openradio.shared.utils.SafeToast
+import app.coradio.shared.R
+import app.coradio.shared.utils.SafeToast
 import java.util.Calendar
 
 class DatePickerFragment : DialogFragment(), DatePickerDialog.OnDateSetListener {

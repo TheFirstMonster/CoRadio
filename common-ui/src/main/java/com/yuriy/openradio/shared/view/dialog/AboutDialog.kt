@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.view.dialog
+package app.coradio.shared.view.dialog
 
 import android.app.Dialog
 import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.media3.common.MediaLibraryInfo
-import com.yuriy.openradio.shared.R
-import com.yuriy.openradio.shared.utils.AnalyticsUtils
-import com.yuriy.openradio.shared.utils.AppUtils
-import com.yuriy.openradio.shared.utils.IntentUtils
-import com.yuriy.openradio.shared.utils.findImageView
-import com.yuriy.openradio.shared.utils.findTextView
+import app.coradio.shared.R
+import app.coradio.shared.utils.AnalyticsUtils
+import app.coradio.shared.utils.AppUtils
+import app.coradio.shared.utils.IntentUtils
+import app.coradio.shared.utils.findImageView
+import app.coradio.shared.utils.findTextView
 
 /**
  * Created by Yuriy Chernyshov
@@ -84,7 +84,7 @@ class AboutDialog : BaseDialogFragment() {
         /**
          * Project's url
          */
-        private const val PROJECT_HOME_URL = "https://github.com/ChernyshovYuriy/OpenRadio"
+        private const val PROJECT_HOME_URL = "https://github.com/ChernyshovYuriy/CoRadio"
 
         private const val EXO_PLAYER_URL = "https://github.com/google/ExoPlayer"
 
@@ -92,7 +92,7 @@ class AboutDialog : BaseDialogFragment() {
 
         private const val SWIPE_EFFECT_URL = "https://github.com/xenione/swipe-maker"
 
-        private const val REPORT_ISSUE_URL = "https://github.com/ChernyshovYuriy/OpenRadio/issues"
+        private const val REPORT_ISSUE_URL = "https://github.com/ChernyshovYuriy/CoRadio/issues"
 
         private const val RADIO_BROWSER_URL = "https://www.radio-browser.info"
 

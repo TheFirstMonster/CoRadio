@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.utils
+package app.coradio.shared.utils
 
 import android.content.Context
-import com.yuriy.openradio.shared.model.ModelLayer
-import com.yuriy.openradio.shared.model.media.RadioStationToAdd
-import com.yuriy.openradio.shared.model.net.UrlLayer
+import app.coradio.shared.model.ModelLayer
+import app.coradio.shared.model.media.RadioStationToAdd
+import app.coradio.shared.model.net.UrlLayer
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 

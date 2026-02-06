@@ -25,18 +25,18 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew assembleDebug
 
-    - name: Upload artifact openradio-debug.apk
+    - name: Upload artifact coradio-debug.apk
       uses: actions/upload-artifact@v6
       with:
-        name: openradio-debug.apk
+        name: coradio-debug.apk
         path: app/build/outputs/apk/debug/app-debug.apk
-    - name: Upload artifact openradio-tv-debug.apk
+    - name: Upload artifact coradio-tv-debug.apk
       uses: actions/upload-artifact@v6
       with:
-        name: openradio-tv-debug.apk
+        name: coradio-tv-debug.apk
         path: tv/build/outputs/apk/debug/tv-debug.apk
-    - name: Upload artifact openradio-automotive-debug.apk
+    - name: Upload artifact coradio-automotive-debug.apk
       uses: actions/upload-artifact@v6
       with:
-        name: openradio-automotive-debug.apk
+        name: coradio-automotive-debug.apk
         path: automotive/build/outputs/apk/debug/automotive-debug.apk

@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yuriy.openradio.shared.presenter
+package app.coradio.shared.presenter
 
 import androidx.media3.common.MediaMetadata
-import com.yuriy.openradio.shared.model.media.PlaybackState
+import app.coradio.shared.model.media.PlaybackState
 
 interface MediaPresenterListener {
     fun showProgressBar()

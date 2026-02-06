@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.media.item
+package app.coradio.shared.model.media.item
 
 import android.content.Context
 import android.os.Bundle
 import androidx.media3.common.MediaItem
-import com.yuriy.openradio.shared.service.OpenRadioService.ResultListener
-import com.yuriy.openradio.shared.service.OpenRadioServicePresenter
+import app.coradio.shared.service.CoRadioService.ResultListener
+import app.coradio.shared.service.CoRadioServicePresenter
 import kotlinx.coroutines.CoroutineScope
 
 /**
@@ -38,7 +38,7 @@ class MediaItemCommandDependencies(
      * Context of the application.
      */
     val context: Context,
-    val presenter: OpenRadioServicePresenter,
+    val presenter: CoRadioServicePresenter,
     val countryCode: String,
     val parentId: String,
     val isSameCatalogue: Boolean,

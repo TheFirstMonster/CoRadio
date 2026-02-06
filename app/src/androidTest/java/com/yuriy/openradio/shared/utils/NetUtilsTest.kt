@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.utils
+package app.coradio.shared.utils
 
 import android.net.Uri
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.yuriy.openradio.shared.utils.NetUtils.checkResource
+import app.coradio.shared.utils.NetUtils.checkResource
 import org.hamcrest.CoreMatchers
 import org.hamcrest.MatcherAssert
 import org.junit.Test

@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yuriy.openradio.shared.service
+package app.coradio.shared.service
 
 import android.content.Context
-import com.yuriy.openradio.shared.model.cast.CastLayer
-import com.yuriy.openradio.shared.model.eq.EqualizerLayer
-import com.yuriy.openradio.shared.model.media.Category
-import com.yuriy.openradio.shared.model.media.RadioStation
-import com.yuriy.openradio.shared.model.media.item.MediaItemCommand
-import com.yuriy.openradio.shared.model.net.NetworkMonitorListener
-import com.yuriy.openradio.shared.model.timer.SleepTimerModel
-import com.yuriy.openradio.shared.model.translation.MediaIdBuilder
-import com.yuriy.openradio.shared.model.translation.MediaIdBuilderDefault
-import com.yuriy.openradio.shared.service.location.Country
+import app.coradio.shared.model.cast.CastLayer
+import app.coradio.shared.model.eq.EqualizerLayer
+import app.coradio.shared.model.media.Category
+import app.coradio.shared.model.media.RadioStation
+import app.coradio.shared.model.media.item.MediaItemCommand
+import app.coradio.shared.model.net.NetworkMonitorListener
+import app.coradio.shared.model.timer.SleepTimerModel
+import app.coradio.shared.model.translation.MediaIdBuilder
+import app.coradio.shared.model.translation.MediaIdBuilderDefault
+import app.coradio.shared.service.location.Country
 
-interface OpenRadioServicePresenter {
+interface CoRadioServicePresenter {
 
     fun getMediaItemCommand(commandId: String): MediaItemCommand?
 

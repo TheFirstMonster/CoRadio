@@ -1,4 +1,4 @@
-package com.yuriy.openradio.shared.model.storage
+package app.coradio.shared.model.storage
 
 interface StorageManagerLayer {
 

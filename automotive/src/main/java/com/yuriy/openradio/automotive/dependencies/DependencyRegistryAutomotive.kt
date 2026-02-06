@@ -1,11 +1,11 @@
-package com.yuriy.openradio.automotive.dependencies
+package app.coradio.automotive.dependencies
 
-import com.yuriy.openradio.automotive.ui.AutomotiveSettingsActivity
-import com.yuriy.openradio.automotive.ui.AutomotiveSettingsActivityPresenter
-import com.yuriy.openradio.automotive.ui.AutomotiveSettingsActivityPresenterImpl
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommon
-import com.yuriy.openradio.shared.dependencies.LocationStorageDependency
-import com.yuriy.openradio.shared.model.storage.LocationStorage
+import app.coradio.automotive.ui.AutomotiveSettingsActivity
+import app.coradio.automotive.ui.AutomotiveSettingsActivityPresenter
+import app.coradio.automotive.ui.AutomotiveSettingsActivityPresenterImpl
+import app.coradio.shared.dependencies.DependencyRegistryCommon
+import app.coradio.shared.dependencies.LocationStorageDependency
+import app.coradio.shared.model.storage.LocationStorage
 import java.util.concurrent.atomic.AtomicBoolean
 
 object DependencyRegistryAutomotive : LocationStorageDependency {

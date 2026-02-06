@@ -1,8 +1,8 @@
-package com.yuriy.openradio.shared.view.dialog
+package app.coradio.shared.view.dialog
 
 import android.content.Context
-import com.yuriy.openradio.shared.model.media.RadioStationManagerLayer
-import com.yuriy.openradio.shared.model.media.RadioStationToAdd
+import app.coradio.shared.model.media.RadioStationManagerLayer
+import app.coradio.shared.model.media.RadioStationToAdd
 
 class AddEditStationDialogPresenterImpl(
     private val mContext: Context,

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.tv.view.activity
+package app.coradio.tv.view.activity
 
-import com.yuriy.openradio.shared.model.media.RadioStation
-import com.yuriy.openradio.shared.model.storage.LatestRadioStationStorage
+import app.coradio.shared.model.media.RadioStation
+import app.coradio.shared.model.storage.LatestRadioStationStorage
 
 class TvMainActivityPresenterImpl(
     private val mLatestRadioStationStorage: LatestRadioStationStorage

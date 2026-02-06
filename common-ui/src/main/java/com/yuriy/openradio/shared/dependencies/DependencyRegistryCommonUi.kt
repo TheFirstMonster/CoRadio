@@ -14,40 +14,40 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.dependencies
+package app.coradio.shared.dependencies
 
 import android.content.Context
-import com.yuriy.openradio.shared.model.cast.CastLayer
-import com.yuriy.openradio.shared.model.eq.EqualizerLayer
-import com.yuriy.openradio.shared.model.logging.LoggingLayer
-import com.yuriy.openradio.shared.model.logging.LoggingLayerImpl
-import com.yuriy.openradio.shared.model.media.RadioStationManagerLayer
-import com.yuriy.openradio.shared.model.net.NetworkLayer
-import com.yuriy.openradio.shared.model.source.SourcesLayer
-import com.yuriy.openradio.shared.model.storage.CloudStoreManager
-import com.yuriy.openradio.shared.model.storage.DeviceLocalsStorage
-import com.yuriy.openradio.shared.model.storage.FavoritesStorage
-import com.yuriy.openradio.shared.model.storage.FileStoreManager
-import com.yuriy.openradio.shared.model.storage.LocationStorage
-import com.yuriy.openradio.shared.model.storage.NetworkSettingsStorage
-import com.yuriy.openradio.shared.model.storage.StorageManagerLayer
-import com.yuriy.openradio.shared.model.storage.StorageManagerLayerImpl
-import com.yuriy.openradio.shared.model.timer.SleepTimerModel
-import com.yuriy.openradio.shared.presenter.MediaPresenter
-import com.yuriy.openradio.shared.presenter.MediaPresenterImpl
-import com.yuriy.openradio.shared.view.dialog.AddEditStationDialogPresenter
-import com.yuriy.openradio.shared.view.dialog.AddEditStationDialogPresenterImpl
-import com.yuriy.openradio.shared.view.dialog.BaseAddEditStationDialog
-import com.yuriy.openradio.shared.view.dialog.EditStationDialog
-import com.yuriy.openradio.shared.view.dialog.EditStationPresenter
-import com.yuriy.openradio.shared.view.dialog.EditStationPresenterImpl
-import com.yuriy.openradio.shared.view.dialog.EqualizerDialog
-import com.yuriy.openradio.shared.view.dialog.EqualizerPresenter
-import com.yuriy.openradio.shared.view.dialog.EqualizerPresenterImpl
-import com.yuriy.openradio.shared.view.dialog.NetworkDialog
-import com.yuriy.openradio.shared.view.dialog.RemoveStationDialog
-import com.yuriy.openradio.shared.view.dialog.RemoveStationDialogPresenter
-import com.yuriy.openradio.shared.view.dialog.RemoveStationDialogPresenterImpl
+import app.coradio.shared.model.cast.CastLayer
+import app.coradio.shared.model.eq.EqualizerLayer
+import app.coradio.shared.model.logging.LoggingLayer
+import app.coradio.shared.model.logging.LoggingLayerImpl
+import app.coradio.shared.model.media.RadioStationManagerLayer
+import app.coradio.shared.model.net.NetworkLayer
+import app.coradio.shared.model.source.SourcesLayer
+import app.coradio.shared.model.storage.CloudStoreManager
+import app.coradio.shared.model.storage.DeviceLocalsStorage
+import app.coradio.shared.model.storage.FavoritesStorage
+import app.coradio.shared.model.storage.FileStoreManager
+import app.coradio.shared.model.storage.LocationStorage
+import app.coradio.shared.model.storage.NetworkSettingsStorage
+import app.coradio.shared.model.storage.StorageManagerLayer
+import app.coradio.shared.model.storage.StorageManagerLayerImpl
+import app.coradio.shared.model.timer.SleepTimerModel
+import app.coradio.shared.presenter.MediaPresenter
+import app.coradio.shared.presenter.MediaPresenterImpl
+import app.coradio.shared.view.dialog.AddEditStationDialogPresenter
+import app.coradio.shared.view.dialog.AddEditStationDialogPresenterImpl
+import app.coradio.shared.view.dialog.BaseAddEditStationDialog
+import app.coradio.shared.view.dialog.EditStationDialog
+import app.coradio.shared.view.dialog.EditStationPresenter
+import app.coradio.shared.view.dialog.EditStationPresenterImpl
+import app.coradio.shared.view.dialog.EqualizerDialog
+import app.coradio.shared.view.dialog.EqualizerPresenter
+import app.coradio.shared.view.dialog.EqualizerPresenterImpl
+import app.coradio.shared.view.dialog.NetworkDialog
+import app.coradio.shared.view.dialog.RemoveStationDialog
+import app.coradio.shared.view.dialog.RemoveStationDialogPresenter
+import app.coradio.shared.view.dialog.RemoveStationDialogPresenterImpl
 import java.util.concurrent.atomic.AtomicBoolean
 
 object DependencyRegistryCommonUi :

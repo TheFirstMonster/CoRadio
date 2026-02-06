@@ -16,6 +16,6 @@
 -->
 <androidx.fragment.app.FragmentContainerView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/search_fragment"
-    android:name="com.yuriy.openradio.tv.view.fragment.TvSearchFragment"
+    android:name="app.coradio.tv.view.fragment.TvSearchFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent" />

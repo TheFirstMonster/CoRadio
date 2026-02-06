@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.storage
+package app.coradio.shared.model.storage
 
 import android.content.Context
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommon
-import com.yuriy.openradio.shared.model.media.MediaId
-import com.yuriy.openradio.shared.model.media.RadioStation
+import app.coradio.shared.dependencies.DependencyRegistryCommon
+import app.coradio.shared.model.media.MediaId
+import app.coradio.shared.model.media.RadioStation
 import java.lang.ref.WeakReference
 
 /**

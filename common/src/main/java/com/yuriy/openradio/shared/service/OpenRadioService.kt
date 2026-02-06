@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.service
+package app.coradio.shared.service
 
 import android.app.PendingIntent
 import android.content.Context
@@ -40,33 +40,33 @@ import com.google.common.collect.ImmutableList
 import com.google.common.util.concurrent.Futures
 import com.google.common.util.concurrent.ListenableFuture
 import com.google.common.util.concurrent.SettableFuture
-import com.yuriy.openradio.R
-import com.yuriy.openradio.shared.broadcast.BTConnectionReceiver
-import com.yuriy.openradio.shared.broadcast.BecomingNoisyReceiver
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommon
-import com.yuriy.openradio.shared.extentions.isEnded
-import com.yuriy.openradio.shared.extentions.isPlayEnabled
-import com.yuriy.openradio.shared.model.media.BrowseTree
-import com.yuriy.openradio.shared.model.media.MediaId
-import com.yuriy.openradio.shared.model.media.RadioStation
-import com.yuriy.openradio.shared.model.media.getStreamUrlFixed
-import com.yuriy.openradio.shared.model.media.isInvalid
-import com.yuriy.openradio.shared.model.media.item.MediaItemCommand
-import com.yuriy.openradio.shared.model.media.item.MediaItemCommandDependencies
-import com.yuriy.openradio.shared.model.net.NetworkMonitorListener
-import com.yuriy.openradio.shared.model.net.UrlLayer
-import com.yuriy.openradio.shared.model.storage.AppPreferencesManager
-import com.yuriy.openradio.shared.model.timer.SleepTimerListener
-import com.yuriy.openradio.shared.service.location.Country
-import com.yuriy.openradio.shared.service.player.OpenRadioPlayer
-import com.yuriy.openradio.shared.utils.AnalyticsUtils
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.AppUtils
-import com.yuriy.openradio.shared.utils.IntentUtils
-import com.yuriy.openradio.shared.utils.MediaItemBuilder
-import com.yuriy.openradio.shared.utils.MediaItemHelper
-import com.yuriy.openradio.shared.utils.NetUtils
-import com.yuriy.openradio.shared.utils.SafeToast
+import app.coradio.R
+import app.coradio.shared.broadcast.BTConnectionReceiver
+import app.coradio.shared.broadcast.BecomingNoisyReceiver
+import app.coradio.shared.dependencies.DependencyRegistryCommon
+import app.coradio.shared.extentions.isEnded
+import app.coradio.shared.extentions.isPlayEnabled
+import app.coradio.shared.model.media.BrowseTree
+import app.coradio.shared.model.media.MediaId
+import app.coradio.shared.model.media.RadioStation
+import app.coradio.shared.model.media.getStreamUrlFixed
+import app.coradio.shared.model.media.isInvalid
+import app.coradio.shared.model.media.item.MediaItemCommand
+import app.coradio.shared.model.media.item.MediaItemCommandDependencies
+import app.coradio.shared.model.net.NetworkMonitorListener
+import app.coradio.shared.model.net.UrlLayer
+import app.coradio.shared.model.storage.AppPreferencesManager
+import app.coradio.shared.model.timer.SleepTimerListener
+import app.coradio.shared.service.location.Country
+import app.coradio.shared.service.player.CoRadioPlayer
+import app.coradio.shared.utils.AnalyticsUtils
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppUtils
+import app.coradio.shared.utils.IntentUtils
+import app.coradio.shared.utils.MediaItemBuilder
+import app.coradio.shared.utils.MediaItemHelper
+import app.coradio.shared.utils.NetUtils
+import app.coradio.shared.utils.SafeToast
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.cancel
@@ -83,13 +83,13 @@ import java.util.concurrent.Executors
  * E-Mail: chernyshov.yuriy@gmail.com
  */
 @UnstableApi
-class OpenRadioService : MediaLibraryService() {
+class CoRadioService : MediaLibraryService() {
 
     /**
      * Player to play Radio stream.
      */
     private val mPlayer by lazy {
-        OpenRadioPlayer(
+        CoRadioPlayer(
             applicationContext,
             PlayerListener(),
             mPresenter.getEqualizerLayer(),
@@ -138,7 +138,7 @@ class OpenRadioService : MediaLibraryService() {
     private val mStartIds: ConcurrentLinkedQueue<Int>
     private var mCurrentParentId = AppUtils.EMPTY_STRING
     private var mIsRestoreState = false
-    private lateinit var mPresenter: OpenRadioServicePresenter
+    private lateinit var mPresenter: CoRadioServicePresenter
     private val mSleepTimerListener = SleepTimerListenerImpl()
 
     private val mBrowseTree: BrowseTree by lazy {
@@ -170,7 +170,7 @@ class OpenRadioService : MediaLibraryService() {
         )
     }
 
-    fun configureWith(presenter: OpenRadioServicePresenter) {
+    fun configureWith(presenter: CoRadioServicePresenter) {
         mPresenter = presenter
     }
 
@@ -194,7 +194,7 @@ class OpenRadioService : MediaLibraryService() {
             packageManager?.getLaunchIntentForPackage(packageName)?.let { sessionIntent ->
                 setSessionActivity(
                     PendingIntent.getActivity(
-                        this@OpenRadioService,
+                        this@CoRadioService,
                         0,
                         sessionIntent,
                         if (Build.VERSION.SDK_INT >= 23) PendingIntent.FLAG_IMMUTABLE
@@ -519,10 +519,10 @@ class OpenRadioService : MediaLibraryService() {
     /**
      * Listener for Exo Player events.
      */
-    private inner class PlayerListener : OpenRadioPlayer.Listener {
+    private inner class PlayerListener : CoRadioPlayer.Listener {
 
         override fun onHandledError(error: PlaybackException) {
-            this@OpenRadioService.onHandledError(error)
+            this@CoRadioService.onHandledError(error)
         }
 
         override fun onPlaybackStateChanged(mediaItem: MediaItem) {
@@ -647,7 +647,7 @@ class OpenRadioService : MediaLibraryService() {
                     true
                 )
             }
-            //mIsRestoreState = OpenRadioStore.getRestoreState(rootHints)
+            //mIsRestoreState = CoRadioStore.getRestoreState(rootHints)
             val libraryParams = LibraryParams.Builder().setExtras(rootExtras).build()
             return Futures.immediateFuture(
                 LibraryResult.ofItem(MediaItemBuilder.buildRootMediaItem(), libraryParams)
@@ -902,10 +902,10 @@ class OpenRadioService : MediaLibraryService() {
                 }
 
                 CMD_UPDATE_SORT_IDS -> {
-                    val mediaId = args.getString(OpenRadioStore.EXTRA_KEY_MEDIA_IDS)
-                    val sortId = args.getInt(OpenRadioStore.EXTRA_KEY_SORT_IDS, 0)
+                    val mediaId = args.getString(CoRadioStore.EXTRA_KEY_MEDIA_IDS)
+                    val sortId = args.getInt(CoRadioStore.EXTRA_KEY_SORT_IDS, 0)
                     val categoryMediaId =
-                        args.getString(OpenRadioStore.EXTRA_KEY_MEDIA_ID) ?: MediaId.MEDIA_ID_ROOT
+                        args.getString(CoRadioStore.EXTRA_KEY_MEDIA_ID) ?: MediaId.MEDIA_ID_ROOT
                     if (mediaId.isNullOrEmpty()) {
                         return mSessionCmdNotSupported
                     }
@@ -924,7 +924,7 @@ class OpenRadioService : MediaLibraryService() {
                 CMD_MASTER_VOLUME_CHANGED -> {
                     handleMasterVolumeChanged(
                         applicationContext,
-                        args.getInt(OpenRadioStore.EXTRA_KEY_MASTER_VOLUME, MASTER_VOLUME_DEFAULT)
+                        args.getInt(CoRadioStore.EXTRA_KEY_MASTER_VOLUME, MASTER_VOLUME_DEFAULT)
                     )
                     return mSessionCmdSuccess
                 }
@@ -1049,7 +1049,7 @@ class OpenRadioService : MediaLibraryService() {
         }
 
         private fun handleFavorite(args: Bundle, isFavorite: Boolean): Boolean {
-            var mediaId = OpenRadioStore.extractMediaId(args)
+            var mediaId = CoRadioStore.extractMediaId(args)
             var rs = getRadioStationByMediaId(mediaId)
             // This can happen when Favorite changed from automotive UI.
             // The assumption is this event can be delivered from the now playing item only.
@@ -1087,15 +1087,15 @@ class OpenRadioService : MediaLibraryService() {
 
     companion object {
 
-        const val CMD_FAVORITE_ON = "com.yuriy.openradio.COMMAND.FAVORITE_ON"
-        const val CMD_FAVORITE_OFF = "com.yuriy.openradio.COMMAND.FAVORITE_OFF"
-        const val CMD_NET_CHANGED = "com.yuriy.openradio.COMMAND.NET_CHANGED"
-        const val CMD_STOP_SERVICE = "com.yuriy.openradio.COMMAND.STOP_SERVICE"
-        const val CMD_TOGGLE_LAST_PLAYED_ITEM = "com.yuriy.openradio.COMMAND.TOGGLE_LAST_PLAYED_ITEM"
-        const val CMD_UPDATE_SORT_IDS = "com.yuriy.openradio.COMMAND.UPDATE_SORT_IDS"
-        const val CMD_CLEAR_CACHE = "com.yuriy.openradio.COMMAND.CLEAR_CACHE"
-        const val CMD_MASTER_VOLUME_CHANGED = "com.yuriy.openradio.COMMAND.MASTER_VOLUME_CHANGED"
-        const val CMD_UPDATE_TREE = "com.yuriy.openradio.COMMAND.UPDATE_TREE"
+        const val CMD_FAVORITE_ON = "app.coradio.COMMAND.FAVORITE_ON"
+        const val CMD_FAVORITE_OFF = "app.coradio.COMMAND.FAVORITE_OFF"
+        const val CMD_NET_CHANGED = "app.coradio.COMMAND.NET_CHANGED"
+        const val CMD_STOP_SERVICE = "app.coradio.COMMAND.STOP_SERVICE"
+        const val CMD_TOGGLE_LAST_PLAYED_ITEM = "app.coradio.COMMAND.TOGGLE_LAST_PLAYED_ITEM"
+        const val CMD_UPDATE_SORT_IDS = "app.coradio.COMMAND.UPDATE_SORT_IDS"
+        const val CMD_CLEAR_CACHE = "app.coradio.COMMAND.CLEAR_CACHE"
+        const val CMD_MASTER_VOLUME_CHANGED = "app.coradio.COMMAND.MASTER_VOLUME_CHANGED"
+        const val CMD_UPDATE_TREE = "app.coradio.COMMAND.UPDATE_TREE"
 
         private lateinit var TAG: String
 

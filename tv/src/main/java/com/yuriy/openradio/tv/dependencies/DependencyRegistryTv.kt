@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.tv.dependencies
+package app.coradio.tv.dependencies
 
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommon
-import com.yuriy.openradio.shared.dependencies.LatestRadioStationStorageDependency
-import com.yuriy.openradio.shared.model.storage.LatestRadioStationStorage
-import com.yuriy.openradio.tv.view.activity.TvMainActivity
-import com.yuriy.openradio.tv.view.activity.TvMainActivityPresenter
-import com.yuriy.openradio.tv.view.activity.TvMainActivityPresenterImpl
+import app.coradio.shared.dependencies.DependencyRegistryCommon
+import app.coradio.shared.dependencies.LatestRadioStationStorageDependency
+import app.coradio.shared.model.storage.LatestRadioStationStorage
+import app.coradio.tv.view.activity.TvMainActivity
+import app.coradio.tv.view.activity.TvMainActivityPresenter
+import app.coradio.tv.view.activity.TvMainActivityPresenterImpl
 import java.util.concurrent.atomic.AtomicBoolean
 
 object DependencyRegistryTv : LatestRadioStationStorageDependency {

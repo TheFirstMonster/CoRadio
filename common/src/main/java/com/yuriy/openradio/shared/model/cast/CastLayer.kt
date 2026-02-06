@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.cast
+package app.coradio.shared.model.cast
 
 import com.google.android.gms.cast.framework.CastContext
 

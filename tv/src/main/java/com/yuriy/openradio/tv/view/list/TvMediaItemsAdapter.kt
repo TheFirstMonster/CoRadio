@@ -13,19 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yuriy.openradio.tv.view.list
+package app.coradio.tv.view.list
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.media3.common.util.UnstableApi
-import com.yuriy.openradio.shared.presenter.MediaPresenter
-import com.yuriy.openradio.shared.utils.MediaItemHelper
-import com.yuriy.openradio.shared.utils.gone
-import com.yuriy.openradio.shared.utils.visible
-import com.yuriy.openradio.shared.view.list.MediaItemViewHolder
-import com.yuriy.openradio.shared.view.list.MediaItemsAdapter
-import com.yuriy.openradio.tv.R
+import app.coradio.shared.presenter.MediaPresenter
+import app.coradio.shared.utils.MediaItemHelper
+import app.coradio.shared.utils.gone
+import app.coradio.shared.utils.visible
+import app.coradio.shared.view.list.MediaItemViewHolder
+import app.coradio.shared.view.list.MediaItemsAdapter
+import app.coradio.tv.R
 
 /**
  * Created by Yuriy Chernyshov

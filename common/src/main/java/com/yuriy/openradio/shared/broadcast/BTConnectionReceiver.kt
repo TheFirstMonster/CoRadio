@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.broadcast
+package app.coradio.shared.broadcast
 
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.AppUtils
-import com.yuriy.openradio.shared.utils.IntentUtils
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppUtils
+import app.coradio.shared.utils.IntentUtils
 
 /**
  * Created by Chernyshov Yurii

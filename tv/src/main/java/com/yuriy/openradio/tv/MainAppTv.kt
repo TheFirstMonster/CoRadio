@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.tv
+package app.coradio.tv
 
-import com.yuriy.openradio.shared.MainAppCommonUi
-import com.yuriy.openradio.tv.dependencies.DependencyRegistryTv
+import app.coradio.shared.MainAppCommonUi
+import app.coradio.tv.dependencies.DependencyRegistryTv
 
 open class MainAppTv : MainAppCommonUi() {
 

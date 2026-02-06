@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.media
+package app.coradio.shared.model.media
 
-import com.yuriy.openradio.shared.model.source.Source
-import com.yuriy.openradio.shared.model.source.SourcesLayer
-import com.yuriy.openradio.shared.utils.AppUtils
+import app.coradio.shared.model.source.Source
+import app.coradio.shared.model.source.SourcesLayer
+import app.coradio.shared.utils.AppUtils
 import java.util.Locale
 
 /**

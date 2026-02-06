@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yuriy.openradio.tv.view.dialog
+package app.coradio.tv.view.dialog
 
 import android.app.Dialog
 import android.content.Context
@@ -22,19 +22,19 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ListView
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommon
-import com.yuriy.openradio.shared.utils.UiUtils
-import com.yuriy.openradio.shared.utils.findTextView
-import com.yuriy.openradio.shared.view.dialog.AboutDialog
-import com.yuriy.openradio.shared.view.dialog.BaseDialogFragment
-import com.yuriy.openradio.shared.view.dialog.GeneralSettingsDialog
-import com.yuriy.openradio.shared.view.dialog.CloudStorageDialog
-import com.yuriy.openradio.shared.view.dialog.FileStorageDialog
-import com.yuriy.openradio.shared.view.dialog.NetworkDialog
-import com.yuriy.openradio.shared.view.dialog.SleepTimerDialog
-import com.yuriy.openradio.shared.view.dialog.SourceDialog
-import com.yuriy.openradio.shared.view.dialog.StreamBufferingDialog
-import com.yuriy.openradio.tv.R
+import app.coradio.shared.dependencies.DependencyRegistryCommon
+import app.coradio.shared.utils.UiUtils
+import app.coradio.shared.utils.findTextView
+import app.coradio.shared.view.dialog.AboutDialog
+import app.coradio.shared.view.dialog.BaseDialogFragment
+import app.coradio.shared.view.dialog.GeneralSettingsDialog
+import app.coradio.shared.view.dialog.CloudStorageDialog
+import app.coradio.shared.view.dialog.FileStorageDialog
+import app.coradio.shared.view.dialog.NetworkDialog
+import app.coradio.shared.view.dialog.SleepTimerDialog
+import app.coradio.shared.view.dialog.SourceDialog
+import app.coradio.shared.view.dialog.StreamBufferingDialog
+import app.coradio.tv.R
 import java.util.concurrent.atomic.AtomicBoolean
 
 /**
@@ -57,23 +57,23 @@ class TvSettingsDialog : BaseDialogFragment() {
 
         val context = requireContext()
 
-        val titleText = context.getString(com.yuriy.openradio.shared.R.string.app_settings_title)
+        val titleText = context.getString(app.coradio.shared.R.string.app_settings_title)
         val title = view.findTextView(R.id.dialog_tv_settings_title_view)
         title.text = titleText
         val listView = view.findViewById<ListView>(R.id.settings_tv_list_view)
         // TODO: Refactor this and the same from activity_main_drawer to string resources
         val values = mutableListOf(
-            getString(com.yuriy.openradio.shared.R.string.main_menu_general),
-            getString(com.yuriy.openradio.shared.R.string.main_menu_source),
-            getString(com.yuriy.openradio.shared.R.string.main_menu_network),
-            getString(com.yuriy.openradio.shared.R.string.main_menu_buffering),
-            getString(com.yuriy.openradio.shared.R.string.main_menu_sleep_timer),
-            getString(com.yuriy.openradio.shared.R.string.main_menu_cloud_storage),
-            getString(com.yuriy.openradio.shared.R.string.main_menu_file_storage),
-            getString(com.yuriy.openradio.shared.R.string.main_menu_about)
+            getString(app.coradio.shared.R.string.main_menu_general),
+            getString(app.coradio.shared.R.string.main_menu_source),
+            getString(app.coradio.shared.R.string.main_menu_network),
+            getString(app.coradio.shared.R.string.main_menu_buffering),
+            getString(app.coradio.shared.R.string.main_menu_sleep_timer),
+            getString(app.coradio.shared.R.string.main_menu_cloud_storage),
+            getString(app.coradio.shared.R.string.main_menu_file_storage),
+            getString(app.coradio.shared.R.string.main_menu_about)
         )
         if (DependencyRegistryCommon.isGoogleApiAvailable.not()) {
-            values.remove(getString(com.yuriy.openradio.shared.R.string.main_menu_cloud_storage))
+            values.remove(getString(app.coradio.shared.R.string.main_menu_cloud_storage))
         }
         val adapter = ArrayAdapterExt(context, android.R.layout.simple_list_item_1, values)
         listView.adapter = adapter

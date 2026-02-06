@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.tv.view.activity
+package app.coradio.tv.view.activity
 
-import com.yuriy.openradio.shared.model.media.RadioStation
+import app.coradio.shared.model.media.RadioStation
 
 /**
  * // TODO: Transfer all business logic from TV Media Activity here.

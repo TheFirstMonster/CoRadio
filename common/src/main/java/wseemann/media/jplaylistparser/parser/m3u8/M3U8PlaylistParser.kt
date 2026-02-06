@@ -16,7 +16,7 @@
 package wseemann.media.jplaylistparser.parser.m3u8
 
 import android.text.TextUtils
-import com.yuriy.openradio.shared.utils.AppUtils
+import app.coradio.shared.utils.AppUtils
 import wseemann.media.jplaylistparser.exception.JPlaylistParserException
 import wseemann.media.jplaylistparser.mime.MediaType
 import wseemann.media.jplaylistparser.mime.MediaType.Companion.audio

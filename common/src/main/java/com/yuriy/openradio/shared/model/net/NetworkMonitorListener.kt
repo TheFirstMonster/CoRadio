@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.net
+package app.coradio.shared.model.net
 
 interface NetworkMonitorListener {
 

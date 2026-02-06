@@ -1,4 +1,4 @@
-package com.yuriy.openradio.shared.utils
+package app.coradio.shared.utils
 
 import org.junit.Assert
 import org.junit.Test

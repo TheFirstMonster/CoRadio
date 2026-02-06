@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.view.dialog
+package app.coradio.shared.view.dialog
 
 import android.app.Dialog
 import android.os.Bundle
@@ -22,19 +22,19 @@ import android.view.View
 import android.widget.NumberPicker
 import androidx.media3.common.MediaItem
 import androidx.media3.common.util.UnstableApi
-import com.yuriy.openradio.shared.R
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommonUi
-import com.yuriy.openradio.shared.dependencies.MediaPresenterDependency
-import com.yuriy.openradio.shared.model.media.MediaId
-import com.yuriy.openradio.shared.presenter.MediaPresenter
-import com.yuriy.openradio.shared.service.OpenRadioService
-import com.yuriy.openradio.shared.service.OpenRadioStore
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.AppUtils
-import com.yuriy.openradio.shared.utils.MediaItemHelper
-import com.yuriy.openradio.shared.utils.findImageView
-import com.yuriy.openradio.shared.utils.findTextView
-import com.yuriy.openradio.shared.utils.findView
+import app.coradio.shared.R
+import app.coradio.shared.dependencies.DependencyRegistryCommonUi
+import app.coradio.shared.dependencies.MediaPresenterDependency
+import app.coradio.shared.model.media.MediaId
+import app.coradio.shared.presenter.MediaPresenter
+import app.coradio.shared.service.CoRadioService
+import app.coradio.shared.service.CoRadioStore
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppUtils
+import app.coradio.shared.utils.MediaItemHelper
+import app.coradio.shared.utils.findImageView
+import app.coradio.shared.utils.findTextView
+import app.coradio.shared.utils.findView
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -79,8 +79,8 @@ class RSSettingsDialog : BaseDialogFragment(), MediaPresenterDependency {
     override fun onPause() {
         if (mSortNewPosition != mSortOriginalPosition) {
             CoroutineScope(Dispatchers.Main).launch {
-                val bundle = OpenRadioStore.makeUpdateSortIdsBundle(mSortMediaId, mSortNewPosition, mParentCategoryId)
-                mMediaPresenter.getServiceCommander().sendCommand(OpenRadioService.CMD_UPDATE_SORT_IDS, bundle)
+                val bundle = CoRadioStore.makeUpdateSortIdsBundle(mSortMediaId, mSortNewPosition, mParentCategoryId)
+                mMediaPresenter.getServiceCommander().sendCommand(CoRadioService.CMD_UPDATE_SORT_IDS, bundle)
                 mMediaPresenter.handleCurrentIndexOnQueueChanged(mSortNewPosition)
             }
         }

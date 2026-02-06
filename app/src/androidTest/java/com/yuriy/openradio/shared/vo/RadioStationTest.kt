@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.vo
+package app.coradio.shared.vo
 
-import com.yuriy.openradio.shared.model.media.MediaStream
-import com.yuriy.openradio.shared.model.media.RadioStation
-import com.yuriy.openradio.shared.model.media.setVariant
-import com.yuriy.openradio.shared.service.location.Country
+import app.coradio.shared.model.media.MediaStream
+import app.coradio.shared.model.media.RadioStation
+import app.coradio.shared.model.media.setVariant
+import app.coradio.shared.service.location.Country
 
 class RadioStationTest {
 

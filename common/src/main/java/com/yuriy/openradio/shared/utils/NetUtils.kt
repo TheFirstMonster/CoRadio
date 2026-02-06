@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.utils
+package app.coradio.shared.utils
 
 import android.content.Context
 import android.net.Uri
 import androidx.core.util.Pair
-import com.yuriy.openradio.R
+import app.coradio.R
 import wseemann.media.jplaylistparser.parser.AutoDetectParser
 import wseemann.media.jplaylistparser.playlist.Playlist
 import wseemann.media.jplaylistparser.playlist.PlaylistEntry

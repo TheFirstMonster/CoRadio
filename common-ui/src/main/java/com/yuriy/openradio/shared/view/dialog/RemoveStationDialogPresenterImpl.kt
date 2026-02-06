@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.view.dialog
+package app.coradio.shared.view.dialog
 
 import android.content.Context
-import com.yuriy.openradio.shared.model.media.RadioStationManagerLayer
-import com.yuriy.openradio.shared.utils.AppLogger
+import app.coradio.shared.model.media.RadioStationManagerLayer
+import app.coradio.shared.utils.AppLogger
 
 class RemoveStationDialogPresenterImpl(private val mContext: Context,
                                        private val mRadioStationManagerLayer: RadioStationManagerLayer) :

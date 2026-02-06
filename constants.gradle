@@ -3,7 +3,7 @@
  */
 project.ext {
 
-    namespace = "com.yuriy.openradio"
+    namespace = "app.coradio"
     javaVersion = JavaVersion.VERSION_1_8
     /**
      * Build and compile constants
@@ -61,7 +61,7 @@ project.ext {
     /**
      * Application constants
      */
-    applicationId = "com.yuriy.openradio"
+    applicationId = "app.coradio"
     versionName = "15.0.0"
     versionCode = 0
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.mobile.view.activity
+package app.coradio.mobile.view.activity
 
 import android.annotation.SuppressLint
 import android.app.assist.AssistContent
@@ -34,43 +34,43 @@ import androidx.media3.common.MediaMetadata
 import com.google.android.gms.cast.framework.CastButtonFactory
 import com.google.android.gms.cast.framework.CastContext
 import com.google.android.material.navigation.NavigationView
-import com.yuriy.openradio.mobile.R
-import com.yuriy.openradio.mobile.view.list.MobileMediaItemsAdapter
-import com.yuriy.openradio.shared.broadcast.AppLocalReceiverCallback
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommon
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommonUi
-import com.yuriy.openradio.shared.dependencies.MediaPresenterDependency
-import com.yuriy.openradio.shared.model.media.MediaId
-import com.yuriy.openradio.shared.model.media.MediaItemsSubscription
-import com.yuriy.openradio.shared.model.media.PlaybackState
-import com.yuriy.openradio.shared.presenter.MediaPresenter
-import com.yuriy.openradio.shared.presenter.MediaPresenterListener
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.PlayerUtils
-import com.yuriy.openradio.shared.utils.SafeToast
-import com.yuriy.openradio.shared.utils.UiUtils
-import com.yuriy.openradio.shared.utils.findCheckBox
-import com.yuriy.openradio.shared.utils.findFloatingActionButton
-import com.yuriy.openradio.shared.utils.findImageView
-import com.yuriy.openradio.shared.utils.findTextView
-import com.yuriy.openradio.shared.utils.findToolbar
-import com.yuriy.openradio.shared.utils.findView
-import com.yuriy.openradio.shared.utils.gone
-import com.yuriy.openradio.shared.utils.visible
-import com.yuriy.openradio.shared.view.dialog.AboutDialog
-import com.yuriy.openradio.shared.view.dialog.AddStationDialog
-import com.yuriy.openradio.shared.view.dialog.BaseDialogFragment
-import com.yuriy.openradio.shared.view.dialog.BatteryOptimizationDialog
-import com.yuriy.openradio.shared.view.dialog.CloudStorageDialog
-import com.yuriy.openradio.shared.view.dialog.EqualizerDialog
-import com.yuriy.openradio.shared.view.dialog.FileStorageDialog
-import com.yuriy.openradio.shared.view.dialog.GeneralSettingsDialog
-import com.yuriy.openradio.shared.view.dialog.NetworkDialog
-import com.yuriy.openradio.shared.view.dialog.SearchDialog
-import com.yuriy.openradio.shared.view.dialog.SleepTimerDialog
-import com.yuriy.openradio.shared.view.dialog.SourceDialog
-import com.yuriy.openradio.shared.view.dialog.StreamBufferingDialog
-import com.yuriy.openradio.shared.view.list.MediaItemsAdapter
+import app.coradio.mobile.R
+import app.coradio.mobile.view.list.MobileMediaItemsAdapter
+import app.coradio.shared.broadcast.AppLocalReceiverCallback
+import app.coradio.shared.dependencies.DependencyRegistryCommon
+import app.coradio.shared.dependencies.DependencyRegistryCommonUi
+import app.coradio.shared.dependencies.MediaPresenterDependency
+import app.coradio.shared.model.media.MediaId
+import app.coradio.shared.model.media.MediaItemsSubscription
+import app.coradio.shared.model.media.PlaybackState
+import app.coradio.shared.presenter.MediaPresenter
+import app.coradio.shared.presenter.MediaPresenterListener
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.PlayerUtils
+import app.coradio.shared.utils.SafeToast
+import app.coradio.shared.utils.UiUtils
+import app.coradio.shared.utils.findCheckBox
+import app.coradio.shared.utils.findFloatingActionButton
+import app.coradio.shared.utils.findImageView
+import app.coradio.shared.utils.findTextView
+import app.coradio.shared.utils.findToolbar
+import app.coradio.shared.utils.findView
+import app.coradio.shared.utils.gone
+import app.coradio.shared.utils.visible
+import app.coradio.shared.view.dialog.AboutDialog
+import app.coradio.shared.view.dialog.AddStationDialog
+import app.coradio.shared.view.dialog.BaseDialogFragment
+import app.coradio.shared.view.dialog.BatteryOptimizationDialog
+import app.coradio.shared.view.dialog.CloudStorageDialog
+import app.coradio.shared.view.dialog.EqualizerDialog
+import app.coradio.shared.view.dialog.FileStorageDialog
+import app.coradio.shared.view.dialog.GeneralSettingsDialog
+import app.coradio.shared.view.dialog.NetworkDialog
+import app.coradio.shared.view.dialog.SearchDialog
+import app.coradio.shared.view.dialog.SleepTimerDialog
+import app.coradio.shared.view.dialog.SourceDialog
+import app.coradio.shared.view.dialog.StreamBufferingDialog
+import app.coradio.shared.view.list.MediaItemsAdapter
 import java.lang.ref.WeakReference
 
 /**
@@ -468,7 +468,7 @@ class MainActivity : AppCompatActivity(), MediaPresenterDependency {
             reference.hideProgressBar()
             SafeToast.showAnyThread(
                 reference.applicationContext,
-                reference.getString(com.yuriy.openradio.shared.R.string.error_loading_media)
+                reference.getString(app.coradio.shared.R.string.error_loading_media)
             )
         }
     }

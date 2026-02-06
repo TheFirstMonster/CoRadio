@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.storage
+package app.coradio.shared.model.storage
 
 import android.content.Context
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.yuriy.openradio.shared.model.media.RadioStation
-import com.yuriy.openradio.shared.vo.RadioStationTest
+import app.coradio.shared.model.media.RadioStation
+import app.coradio.shared.vo.RadioStationTest
 import org.hamcrest.CoreMatchers
 import org.hamcrest.MatcherAssert
 import org.junit.After

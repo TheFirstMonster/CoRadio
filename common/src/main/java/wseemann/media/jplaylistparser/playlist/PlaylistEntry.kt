@@ -15,7 +15,7 @@
  */
 package wseemann.media.jplaylistparser.playlist
 
-import com.yuriy.openradio.shared.utils.AppUtils
+import app.coradio.shared.utils.AppUtils
 
 /**
  * A multi-valued metadata container.

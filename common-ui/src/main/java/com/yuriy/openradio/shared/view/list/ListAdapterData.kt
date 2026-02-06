@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yuriy.openradio.shared.view.list
+package app.coradio.shared.view.list
 
 import java.io.Serializable
 

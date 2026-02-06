@@ -1,7 +1,7 @@
-package com.yuriy.openradio.shared.model.filter
+package app.coradio.shared.model.filter
 
-import com.yuriy.openradio.shared.model.media.RadioStation
-import com.yuriy.openradio.shared.model.media.setVariant
+import app.coradio.shared.model.media.RadioStation
+import app.coradio.shared.model.media.setVariant
 import org.junit.Assert
 import org.junit.Test
 

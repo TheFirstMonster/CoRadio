@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yuriy.openradio.shared.broadcast
+package app.coradio.shared.broadcast
 
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.media.AudioManager
-import com.yuriy.openradio.shared.utils.AppLogger.i
+import app.coradio.shared.utils.AppLogger.i
 
 /**
  * Created by Chernyshov Yurii

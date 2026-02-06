@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.dependencies
+package app.coradio.shared.dependencies
 
-import com.yuriy.openradio.shared.model.cast.CastLayer
+import app.coradio.shared.model.cast.CastLayer
 
 /**
  * [CastLayerDependency] is an interface that helps to inject [CastLayer] into a client.

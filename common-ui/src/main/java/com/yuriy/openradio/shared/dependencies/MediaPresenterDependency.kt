@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.dependencies
+package app.coradio.shared.dependencies
 
-import com.yuriy.openradio.shared.presenter.MediaPresenter
+import app.coradio.shared.presenter.MediaPresenter
 
 /**
  * [MediaPresenterDependency] is an interface that helps to inject [MediaPresenter] into a client.

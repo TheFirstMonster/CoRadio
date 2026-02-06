@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.storage
+package app.coradio.shared.model.storage
 
 import android.app.Activity
 import android.content.Context
@@ -22,11 +22,11 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommonUi
-import com.yuriy.openradio.shared.dependencies.StorageManagerDependency
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.AppUtils
-import com.yuriy.openradio.shared.utils.IntentUtils
+import app.coradio.shared.dependencies.DependencyRegistryCommonUi
+import app.coradio.shared.dependencies.StorageManagerDependency
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppUtils
+import app.coradio.shared.utils.IntentUtils
 import java.io.ByteArrayOutputStream
 
 class FileStoreManager : StorageManagerDependency {
@@ -174,7 +174,7 @@ class FileStoreManager : StorageManagerDependency {
         private const val TAG = "FSM"
         private const val KEY_FAV = "favorites"
         private const val KEY_LOC = "locals"
-        private const val FILE_NAME = "openradio_data"
+        private const val FILE_NAME = "coradio_data"
         private const val FILE_TYPE = "text/plain"
         private const val REQUEST_CODE_CREATE_FILE = 1234
         private const val REQUEST_CODE_OPEN_FILE = 5678

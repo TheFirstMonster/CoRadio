@@ -16,9 +16,9 @@
 
 package wseemann.media.jplaylistparser.parser.asx
 
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.AppUtils
-import com.yuriy.openradio.shared.utils.NetUtils
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppUtils
+import app.coradio.shared.utils.NetUtils
 import org.jdom2.Document
 import org.jdom2.Element
 import org.jdom2.JDOMException

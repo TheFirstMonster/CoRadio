@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.media
+package app.coradio.shared.model.media
 
 import android.text.TextUtils
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommon
-import com.yuriy.openradio.shared.model.storage.images.ImagesStore
-import com.yuriy.openradio.shared.service.location.LocationService
-import com.yuriy.openradio.shared.utils.AppUtils
+import app.coradio.shared.dependencies.DependencyRegistryCommon
+import app.coradio.shared.model.storage.images.ImagesStore
+import app.coradio.shared.service.location.LocationService
+import app.coradio.shared.utils.AppUtils
 import java.io.Serializable
 import java.util.Locale
 

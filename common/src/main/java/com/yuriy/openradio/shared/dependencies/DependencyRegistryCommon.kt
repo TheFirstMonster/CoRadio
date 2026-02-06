@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.dependencies
+package app.coradio.shared.dependencies
 
 import android.app.UiModeManager
 import android.content.Context
@@ -23,48 +23,48 @@ import android.net.ConnectivityManager
 import androidx.multidex.MultiDexApplication
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
-import com.yuriy.openradio.shared.model.ModelLayerImpl
-import com.yuriy.openradio.shared.model.cast.CastLayer
-import com.yuriy.openradio.shared.model.cast.CastLayerImpl
-import com.yuriy.openradio.shared.model.eq.EqualizerLayer
-import com.yuriy.openradio.shared.model.eq.EqualizerLayerImpl
-import com.yuriy.openradio.shared.model.filter.FilterImpl
-import com.yuriy.openradio.shared.model.media.RadioStationManagerLayer
-import com.yuriy.openradio.shared.model.media.RadioStationManagerLayerImpl
-import com.yuriy.openradio.shared.model.media.RadioStationManagerLayerListener
-import com.yuriy.openradio.shared.model.net.HTTPDownloaderImpl
-import com.yuriy.openradio.shared.model.net.NetworkLayer
-import com.yuriy.openradio.shared.model.net.NetworkLayerImpl
-import com.yuriy.openradio.shared.model.net.UrlLayer
-import com.yuriy.openradio.shared.model.net.UrlLayerRadioBrowserImpl
-import com.yuriy.openradio.shared.model.net.UrlLayerWebRadioImpl
-import com.yuriy.openradio.shared.model.parser.FeaturedParserLayer
-import com.yuriy.openradio.shared.model.parser.FeaturedParserLayerFirestone
-import com.yuriy.openradio.shared.model.parser.ParserLayer
-import com.yuriy.openradio.shared.model.parser.ParserLayerRadioBrowserImpl
-import com.yuriy.openradio.shared.model.parser.ParserLayerWebRadioImpl
-import com.yuriy.openradio.shared.model.source.Source
-import com.yuriy.openradio.shared.model.source.SourcesLayer
-import com.yuriy.openradio.shared.model.source.SourcesLayerImpl
-import com.yuriy.openradio.shared.model.storage.DeviceLocalsStorage
-import com.yuriy.openradio.shared.model.storage.EqualizerStorage
-import com.yuriy.openradio.shared.model.storage.FavoritesStorage
-import com.yuriy.openradio.shared.model.storage.LatestRadioStationStorage
-import com.yuriy.openradio.shared.model.storage.LocationStorage
-import com.yuriy.openradio.shared.model.storage.NetworkSettingsStorage
-import com.yuriy.openradio.shared.model.storage.cache.api.InMemoryApiCache
-import com.yuriy.openradio.shared.model.storage.cache.api.PersistentApiCache
-import com.yuriy.openradio.shared.model.storage.cache.api.PersistentApiDb
-import com.yuriy.openradio.shared.model.storage.images.ImagesDatabase
-import com.yuriy.openradio.shared.model.storage.images.ImagesPersistenceLayer
-import com.yuriy.openradio.shared.model.storage.images.ImagesPersistenceLayerImpl
-import com.yuriy.openradio.shared.model.storage.images.ImagesProvider
-import com.yuriy.openradio.shared.model.timer.SleepTimerModel
-import com.yuriy.openradio.shared.model.timer.SleepTimerModelImpl
-import com.yuriy.openradio.shared.service.OpenRadioService
-import com.yuriy.openradio.shared.service.OpenRadioServicePresenterImpl
-import com.yuriy.openradio.shared.service.location.Country
-import com.yuriy.openradio.shared.utils.AppLogger
+import app.coradio.shared.model.ModelLayerImpl
+import app.coradio.shared.model.cast.CastLayer
+import app.coradio.shared.model.cast.CastLayerImpl
+import app.coradio.shared.model.eq.EqualizerLayer
+import app.coradio.shared.model.eq.EqualizerLayerImpl
+import app.coradio.shared.model.filter.FilterImpl
+import app.coradio.shared.model.media.RadioStationManagerLayer
+import app.coradio.shared.model.media.RadioStationManagerLayerImpl
+import app.coradio.shared.model.media.RadioStationManagerLayerListener
+import app.coradio.shared.model.net.HTTPDownloaderImpl
+import app.coradio.shared.model.net.NetworkLayer
+import app.coradio.shared.model.net.NetworkLayerImpl
+import app.coradio.shared.model.net.UrlLayer
+import app.coradio.shared.model.net.UrlLayerRadioBrowserImpl
+import app.coradio.shared.model.net.UrlLayerWebRadioImpl
+import app.coradio.shared.model.parser.FeaturedParserLayer
+import app.coradio.shared.model.parser.FeaturedParserLayerFirestone
+import app.coradio.shared.model.parser.ParserLayer
+import app.coradio.shared.model.parser.ParserLayerRadioBrowserImpl
+import app.coradio.shared.model.parser.ParserLayerWebRadioImpl
+import app.coradio.shared.model.source.Source
+import app.coradio.shared.model.source.SourcesLayer
+import app.coradio.shared.model.source.SourcesLayerImpl
+import app.coradio.shared.model.storage.DeviceLocalsStorage
+import app.coradio.shared.model.storage.EqualizerStorage
+import app.coradio.shared.model.storage.FavoritesStorage
+import app.coradio.shared.model.storage.LatestRadioStationStorage
+import app.coradio.shared.model.storage.LocationStorage
+import app.coradio.shared.model.storage.NetworkSettingsStorage
+import app.coradio.shared.model.storage.cache.api.InMemoryApiCache
+import app.coradio.shared.model.storage.cache.api.PersistentApiCache
+import app.coradio.shared.model.storage.cache.api.PersistentApiDb
+import app.coradio.shared.model.storage.images.ImagesDatabase
+import app.coradio.shared.model.storage.images.ImagesPersistenceLayer
+import app.coradio.shared.model.storage.images.ImagesPersistenceLayerImpl
+import app.coradio.shared.model.storage.images.ImagesProvider
+import app.coradio.shared.model.timer.SleepTimerModel
+import app.coradio.shared.model.timer.SleepTimerModelImpl
+import app.coradio.shared.service.CoRadioService
+import app.coradio.shared.service.CoRadioServicePresenterImpl
+import app.coradio.shared.service.location.Country
+import app.coradio.shared.utils.AppLogger
 import java.lang.ref.WeakReference
 import java.util.TreeSet
 import java.util.concurrent.atomic.AtomicBoolean
@@ -83,7 +83,7 @@ object DependencyRegistryCommon {
     private lateinit var sNetworkLayer: NetworkLayer
     private lateinit var sRadioStationManagerLayer: RadioStationManagerLayer
     private lateinit var sImagesPersistenceLayer: ImagesPersistenceLayer
-    private lateinit var sOpenRadioServicePresenter: OpenRadioServicePresenterImpl
+    private lateinit var sCoRadioServicePresenter: CoRadioServicePresenterImpl
     private lateinit var sSleepTimerModel: SleepTimerModel
     private lateinit var sSourcesLayer: SourcesLayer
     private lateinit var sCastLayer: CastLayer
@@ -165,7 +165,7 @@ object DependencyRegistryCommon {
         sLocationStorage = LocationStorage(contextRef)
         sNetworkSettingsStorage = NetworkSettingsStorage(contextRef)
         sSleepTimerModel = SleepTimerModelImpl(contextRef)
-        sOpenRadioServicePresenter = OpenRadioServicePresenterImpl(
+        sCoRadioServicePresenter = CoRadioServicePresenterImpl(
             isCar,
             source,
             urlLayer,
@@ -211,8 +211,8 @@ object DependencyRegistryCommon {
         dependency.configureWith(sImagesPersistenceLayer)
     }
 
-    fun inject(service: OpenRadioService) {
-        service.configureWith(sOpenRadioServicePresenter)
+    fun inject(service: CoRadioService) {
+        service.configureWith(sCoRadioServicePresenter)
     }
 
     fun injectSleepTimerModel(dependency: SleepTimerModelDependency) {

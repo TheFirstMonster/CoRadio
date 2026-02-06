@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.storage
+package app.coradio.shared.model.storage
 
-import com.yuriy.openradio.shared.model.media.RadioStation
+import app.coradio.shared.model.media.RadioStation
 import java.util.TreeSet
 
 class StorageManagerLayerImpl(

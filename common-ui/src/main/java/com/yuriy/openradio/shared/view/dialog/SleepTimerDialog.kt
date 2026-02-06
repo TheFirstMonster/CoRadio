@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.view.dialog
+package app.coradio.shared.view.dialog
 
 import android.app.Dialog
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.FragmentManager
-import com.yuriy.openradio.shared.R
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommon
-import com.yuriy.openradio.shared.dependencies.SleepTimerModelDependency
-import com.yuriy.openradio.shared.model.timer.SleepTimerModel
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.SafeToast
-import com.yuriy.openradio.shared.utils.findButton
-import com.yuriy.openradio.shared.utils.findLinearLayout
-import com.yuriy.openradio.shared.utils.findTextView
-import com.yuriy.openradio.shared.utils.findToggleButton
+import app.coradio.shared.R
+import app.coradio.shared.dependencies.DependencyRegistryCommon
+import app.coradio.shared.dependencies.SleepTimerModelDependency
+import app.coradio.shared.model.timer.SleepTimerModel
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.SafeToast
+import app.coradio.shared.utils.findButton
+import app.coradio.shared.utils.findLinearLayout
+import app.coradio.shared.utils.findTextView
+import app.coradio.shared.utils.findToggleButton
 import java.text.SimpleDateFormat
 import java.util.Locale
 

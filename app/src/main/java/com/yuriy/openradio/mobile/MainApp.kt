@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.mobile
+package app.coradio.mobile
 
-import com.yuriy.openradio.mobile.dependencies.DependencyRegistry
-import com.yuriy.openradio.shared.MainAppCommonUi
+import app.coradio.mobile.dependencies.DependencyRegistry
+import app.coradio.shared.MainAppCommonUi
 
 class MainApp: MainAppCommonUi() {
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.permission
+package app.coradio.shared.permission
 
 import android.Manifest
 import android.app.Activity
@@ -25,8 +25,8 @@ import android.view.View
 import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import com.google.android.material.snackbar.Snackbar
-import com.yuriy.openradio.R
-import com.yuriy.openradio.shared.utils.AppUtils
+import app.coradio.R
+import app.coradio.shared.utils.AppUtils
 
 /**
  * [PermissionChecker] is a helper class that designed to manage permissions changes

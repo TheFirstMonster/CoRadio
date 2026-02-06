@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.storage.cache.api
+package app.coradio.shared.model.storage.cache.api
 
 import android.content.Context
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.AppUtils
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppUtils
 
 /**
  * Created by Chernyshov Yurii

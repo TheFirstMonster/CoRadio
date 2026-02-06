@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.mobile.dependencies
+package app.coradio.mobile.dependencies
 
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommon
-import com.yuriy.openradio.shared.dependencies.FavoritesStorageDependency
-import com.yuriy.openradio.shared.dependencies.LatestRadioStationStorageDependency
-import com.yuriy.openradio.shared.model.storage.FavoritesStorage
-import com.yuriy.openradio.shared.model.storage.LatestRadioStationStorage
+import app.coradio.shared.dependencies.DependencyRegistryCommon
+import app.coradio.shared.dependencies.FavoritesStorageDependency
+import app.coradio.shared.dependencies.LatestRadioStationStorageDependency
+import app.coradio.shared.model.storage.FavoritesStorage
+import app.coradio.shared.model.storage.LatestRadioStationStorage
 import java.util.concurrent.atomic.AtomicBoolean
 
 object DependencyRegistry : FavoritesStorageDependency, LatestRadioStationStorageDependency {

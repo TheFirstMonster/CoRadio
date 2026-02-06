@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared
+package app.coradio.shared
 
 import android.content.Context
 import android.os.Build
@@ -24,11 +24,11 @@ import androidx.media3.exoplayer.DefaultLoadControl
 import androidx.multidex.MultiDex
 import androidx.multidex.MultiDexApplication
 import com.google.android.gms.security.ProviderInstaller
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommon
-import com.yuriy.openradio.shared.model.storage.AppPreferencesManager
-import com.yuriy.openradio.shared.utils.AnalyticsUtils
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.AppUtils
+import app.coradio.shared.dependencies.DependencyRegistryCommon
+import app.coradio.shared.model.storage.AppPreferencesManager
+import app.coradio.shared.utils.AnalyticsUtils
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppUtils
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob

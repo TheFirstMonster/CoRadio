@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yuriy.openradio.shared.model.media
+package app.coradio.shared.model.media
 
 import android.content.Context
-import com.yuriy.openradio.R
+import app.coradio.R
 
 /**
  * Created by Yuriy Chernyshov

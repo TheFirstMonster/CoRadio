@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.dependencies
+package app.coradio.shared.dependencies
 
-import com.yuriy.openradio.shared.model.timer.SleepTimerModel
+import app.coradio.shared.model.timer.SleepTimerModel
 
 /**
  * [SleepTimerModelDependency] is an interface that helps to inject [SleepTimerModel] into a client.

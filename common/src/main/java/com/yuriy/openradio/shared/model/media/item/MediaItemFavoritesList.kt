@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.media.item
+package app.coradio.shared.model.media.item
 
-import com.yuriy.openradio.shared.model.media.isInvalid
-import com.yuriy.openradio.shared.model.media.item.MediaItemCommand.IUpdatePlaybackState
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.MediaItemBuilder
+import app.coradio.shared.model.media.isInvalid
+import app.coradio.shared.model.media.item.MediaItemCommand.IUpdatePlaybackState
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.MediaItemBuilder
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch

@@ -16,7 +16,7 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.yuriy.openradio">
+    package="app.coradio">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -47,7 +47,7 @@
 
         <provider
             android:name=".shared.model.storage.images.ImagesProvider"
-            android:authorities="openradio.images"
+            android:authorities="coradio.images"
             android:enabled="true"
             android:exported="true" />
 
@@ -76,7 +76,7 @@
             android:stopWithTask="true" />
 
         <service
-            android:name=".shared.service.OpenRadioService"
+            android:name=".shared.service.CoRadioService"
             android:exported="true"
             android:enabled="true"
             android:foregroundServiceType="mediaPlayback"

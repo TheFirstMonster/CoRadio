@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.filter
+package app.coradio.shared.model.filter
 
-import com.yuriy.openradio.shared.model.media.RadioStation
+import app.coradio.shared.model.media.RadioStation
 
 /**
  * Interface to filter out radio station based on criteria provided.

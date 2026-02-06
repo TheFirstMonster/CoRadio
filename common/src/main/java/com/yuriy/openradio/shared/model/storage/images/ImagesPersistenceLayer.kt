@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.storage.images
+package app.coradio.shared.model.storage.images
 
 import android.net.Uri
 import android.os.ParcelFileDescriptor

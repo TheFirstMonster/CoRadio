@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.logging
+package app.coradio.shared.model.logging
 
 import android.content.Context
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.os.Build
-import com.yuriy.openradio.shared.R
-import com.yuriy.openradio.shared.utils.AppUtils
+import app.coradio.shared.R
+import app.coradio.shared.utils.AppUtils
 import jakarta.activation.DataHandler
 import jakarta.activation.FileDataSource
 import jakarta.mail.Authenticator

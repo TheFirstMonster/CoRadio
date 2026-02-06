@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.net
+package app.coradio.shared.model.net
 
 import android.net.Uri
 import androidx.core.util.Pair
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.NetUtils
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.NetUtils
 import java.net.MalformedURLException
 import java.net.URL
 

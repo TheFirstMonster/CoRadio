@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.media.item
+package app.coradio.shared.model.media.item
 
 /**
  * Created by Yuriy Chernyshov

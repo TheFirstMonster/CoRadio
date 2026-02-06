@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.dependencies
+package app.coradio.shared.dependencies
 
-import com.yuriy.openradio.shared.model.storage.StorageManagerLayer
+import app.coradio.shared.model.storage.StorageManagerLayer
 
 /**
  * [StorageManagerDependency] is an interface that helps to inject [StorageManagerLayer] into a client.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.extentions
+package app.coradio.shared.extentions
 
 import androidx.media3.common.Player
 

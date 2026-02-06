@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.parser
+package app.coradio.shared.model.parser
 
 import android.net.Uri
-import com.yuriy.openradio.shared.model.filter.Filter
-import com.yuriy.openradio.shared.model.media.Category
-import com.yuriy.openradio.shared.model.media.RadioStation
-import com.yuriy.openradio.shared.model.media.setVariant
-import com.yuriy.openradio.shared.model.translation.MediaIdBuilder
-import com.yuriy.openradio.shared.service.location.Country
-import com.yuriy.openradio.shared.service.location.LocationService
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.AppUtils
-import com.yuriy.openradio.shared.utils.JsonUtils
+import app.coradio.shared.model.filter.Filter
+import app.coradio.shared.model.media.Category
+import app.coradio.shared.model.media.RadioStation
+import app.coradio.shared.model.media.setVariant
+import app.coradio.shared.model.translation.MediaIdBuilder
+import app.coradio.shared.service.location.Country
+import app.coradio.shared.service.location.LocationService
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppUtils
+import app.coradio.shared.utils.JsonUtils
 import org.json.JSONArray
 import org.json.JSONObject
 import java.util.Locale

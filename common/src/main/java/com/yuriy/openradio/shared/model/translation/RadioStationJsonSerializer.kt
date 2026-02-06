@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.translation
+package app.coradio.shared.model.translation
 
-import com.yuriy.openradio.shared.model.media.RadioStation
-import com.yuriy.openradio.shared.model.media.getStreamBitrate
-import com.yuriy.openradio.shared.model.media.getStreamUrlFixed
-import com.yuriy.openradio.shared.utils.AppLogger
+import app.coradio.shared.model.media.RadioStation
+import app.coradio.shared.model.media.getStreamBitrate
+import app.coradio.shared.model.media.getStreamUrlFixed
+import app.coradio.shared.utils.AppLogger
 import org.json.JSONObject
 
 /**

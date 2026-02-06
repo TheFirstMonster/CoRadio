@@ -16,11 +16,11 @@
 
 package wseemann.media.jplaylistparser.parser
 
-import com.yuriy.openradio.shared.extentions.equalsIgnoreCase
-import com.yuriy.openradio.shared.utils.AnalyticsUtils
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.AppUtils
-import com.yuriy.openradio.shared.utils.NetUtils
+import app.coradio.shared.extentions.equalsIgnoreCase
+import app.coradio.shared.utils.AnalyticsUtils
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppUtils
+import app.coradio.shared.utils.NetUtils
 import okhttp3.Call
 import okhttp3.Callback
 import okhttp3.HttpUrl

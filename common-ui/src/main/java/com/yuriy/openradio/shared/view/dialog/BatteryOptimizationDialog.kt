@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.view.dialog
+package app.coradio.shared.view.dialog
 
 import android.app.Dialog
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.FragmentManager
-import com.yuriy.openradio.shared.R
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.AppUtils
+import app.coradio.shared.R
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppUtils
 
 /**
  *

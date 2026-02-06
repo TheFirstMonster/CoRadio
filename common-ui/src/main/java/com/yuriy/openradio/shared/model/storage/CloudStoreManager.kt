@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.storage
+package app.coradio.shared.model.storage
 
 import android.app.Activity
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommonUi
-import com.yuriy.openradio.shared.dependencies.StorageManagerDependency
-import com.yuriy.openradio.shared.utils.AppLogger
+import app.coradio.shared.dependencies.DependencyRegistryCommonUi
+import app.coradio.shared.dependencies.StorageManagerDependency
+import app.coradio.shared.utils.AppLogger
 
 class CloudStoreManager : StorageManagerDependency {
 

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.parser
+package app.coradio.shared.model.parser
 
-import com.yuriy.openradio.shared.model.media.RadioStation
+import app.coradio.shared.model.media.RadioStation
 
 interface FeaturedParserLayer {
 

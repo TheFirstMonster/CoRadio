@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.translation
+package app.coradio.shared.model.translation
 
-import com.yuriy.openradio.shared.model.eq.EqualizerState
+import app.coradio.shared.model.eq.EqualizerState
 
 /**
  * Created by Yuriy Chernyshov

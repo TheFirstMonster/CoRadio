@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.media.item
+package app.coradio.shared.model.media.item
 
-import com.yuriy.openradio.R
-import com.yuriy.openradio.shared.model.media.item.MediaItemCommand.IUpdatePlaybackState
-import com.yuriy.openradio.shared.model.source.Source
-import com.yuriy.openradio.shared.utils.MediaItemBuilder
+import app.coradio.R
+import app.coradio.shared.model.media.item.MediaItemCommand.IUpdatePlaybackState
+import app.coradio.shared.model.source.Source
+import app.coradio.shared.utils.MediaItemBuilder
 
 /**
  * Created by Yuriy Chernyshov

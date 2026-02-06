@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.storage.images
+package app.coradio.shared.model.storage.images
 
 import android.content.ContentProvider
 import android.content.ContentValues
 import android.database.Cursor
 import android.net.Uri
 import android.os.ParcelFileDescriptor
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommon
+import app.coradio.shared.dependencies.DependencyRegistryCommon
 
 class ImagesProvider : ContentProvider() {
 

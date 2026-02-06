@@ -1,7 +1,7 @@
-package com.yuriy.openradio.shared.model.storage
+package app.coradio.shared.model.storage
 
-import com.yuriy.openradio.shared.model.media.RadioStation
-import com.yuriy.openradio.shared.model.translation.RadioStationJsonDeserializer
+import app.coradio.shared.model.media.RadioStation
+import app.coradio.shared.model.translation.RadioStationJsonDeserializer
 import org.hamcrest.MatcherAssert
 import org.hamcrest.core.Is
 import org.junit.Assert

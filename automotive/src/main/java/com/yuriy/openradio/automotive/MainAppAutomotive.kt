@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.automotive
+package app.coradio.automotive
 
-import com.yuriy.openradio.automotive.dependencies.DependencyRegistryAutomotive
-import com.yuriy.openradio.shared.MainAppCommon
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommonUi
+import app.coradio.automotive.dependencies.DependencyRegistryAutomotive
+import app.coradio.shared.MainAppCommon
+import app.coradio.shared.dependencies.DependencyRegistryCommonUi
 
 class MainAppAutomotive: MainAppCommon() {
 

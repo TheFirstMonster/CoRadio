@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.source
+package app.coradio.shared.model.source
 
 import android.content.Context
-import com.yuriy.openradio.shared.model.storage.SourceStorage
-import com.yuriy.openradio.shared.utils.AppLogger
+import app.coradio.shared.model.storage.SourceStorage
+import app.coradio.shared.utils.AppLogger
 import java.lang.ref.WeakReference
 
 class SourcesLayerImpl(context: Context) : SourcesLayer {

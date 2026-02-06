@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.storage
+package app.coradio.shared.model.storage
 
 import android.content.Context
-import com.yuriy.openradio.shared.utils.AppUtils
+import app.coradio.shared.utils.AppUtils
 import java.lang.ref.WeakReference
 
 /**

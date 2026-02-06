@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yuriy.openradio.shared.view.dialog
+package app.coradio.shared.view.dialog
 
 import android.app.Activity
 import android.content.Intent
@@ -27,25 +27,25 @@ import android.widget.EditText
 import android.widget.FrameLayout
 import android.widget.ProgressBar
 import android.widget.Spinner
-import com.yuriy.openradio.shared.R
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommon
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommonUi
-import com.yuriy.openradio.shared.dependencies.SourcesLayerDependency
-import com.yuriy.openradio.shared.model.media.RadioStationToAdd
-import com.yuriy.openradio.shared.model.source.SourcesLayer
-import com.yuriy.openradio.shared.permission.PermissionChecker
-import com.yuriy.openradio.shared.service.location.LocationService
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.AppUtils
-import com.yuriy.openradio.shared.utils.ImageFilePath
-import com.yuriy.openradio.shared.utils.IntentUtils
-import com.yuriy.openradio.shared.utils.SafeToast
-import com.yuriy.openradio.shared.utils.findButton
-import com.yuriy.openradio.shared.utils.findEditText
-import com.yuriy.openradio.shared.utils.findLinearLayout
-import com.yuriy.openradio.shared.utils.findView
-import com.yuriy.openradio.shared.utils.invisible
-import com.yuriy.openradio.shared.utils.visible
+import app.coradio.shared.R
+import app.coradio.shared.dependencies.DependencyRegistryCommon
+import app.coradio.shared.dependencies.DependencyRegistryCommonUi
+import app.coradio.shared.dependencies.SourcesLayerDependency
+import app.coradio.shared.model.media.RadioStationToAdd
+import app.coradio.shared.model.source.SourcesLayer
+import app.coradio.shared.permission.PermissionChecker
+import app.coradio.shared.service.location.LocationService
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppUtils
+import app.coradio.shared.utils.ImageFilePath
+import app.coradio.shared.utils.IntentUtils
+import app.coradio.shared.utils.SafeToast
+import app.coradio.shared.utils.findButton
+import app.coradio.shared.utils.findEditText
+import app.coradio.shared.utils.findLinearLayout
+import app.coradio.shared.utils.findView
+import app.coradio.shared.utils.invisible
+import app.coradio.shared.utils.visible
 
 /**
  * Created by Yuriy Chernyshov

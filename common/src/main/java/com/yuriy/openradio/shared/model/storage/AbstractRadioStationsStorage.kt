@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yuriy.openradio.shared.model.storage
+package app.coradio.shared.model.storage
 
 import android.content.Context
-import com.yuriy.openradio.shared.model.media.RadioStation
-import com.yuriy.openradio.shared.model.media.isInvalid
-import com.yuriy.openradio.shared.model.translation.RadioStationJsonDeserializer
-import com.yuriy.openradio.shared.model.translation.RadioStationJsonSerializer
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.AppUtils
+import app.coradio.shared.model.media.RadioStation
+import app.coradio.shared.model.media.isInvalid
+import app.coradio.shared.model.translation.RadioStationJsonDeserializer
+import app.coradio.shared.model.translation.RadioStationJsonSerializer
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppUtils
 import java.lang.ref.WeakReference
 import java.util.TreeSet
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.view.list
+package app.coradio.shared.view.list
 
 import android.content.Context
 import android.view.LayoutInflater

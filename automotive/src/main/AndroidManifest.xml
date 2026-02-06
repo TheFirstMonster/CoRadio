@@ -51,7 +51,7 @@
             android:resource="@drawable/ic_auto_icon" />
 
         <service
-            android:name="com.yuriy.openradio.shared.service.OpenRadioService"
+            android:name="app.coradio.shared.service.CoRadioService"
             android:enabled="true"
             android:exported="true"
             android:foregroundServiceType="mediaPlayback"

@@ -1,6 +1,6 @@
-package com.yuriy.openradio.shared.view.dialog
+package app.coradio.shared.view.dialog
 
-import com.yuriy.openradio.shared.model.media.RadioStation
+import app.coradio.shared.model.media.RadioStation
 
 /**
  * // TODO : Move business logic from Edit Dialog here.

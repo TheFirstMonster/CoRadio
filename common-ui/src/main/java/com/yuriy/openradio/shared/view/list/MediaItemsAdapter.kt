@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.view.list
+package app.coradio.shared.view.list
 
 import android.content.Context
 import android.view.View
@@ -26,16 +26,16 @@ import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata
 import androidx.media3.common.util.UnstableApi
 import androidx.recyclerview.widget.RecyclerView
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommon
-import com.yuriy.openradio.shared.model.ServiceCommander
-import com.yuriy.openradio.shared.model.media.MediaId
-import com.yuriy.openradio.shared.model.storage.images.ImagesStore
-import com.yuriy.openradio.shared.service.OpenRadioService
-import com.yuriy.openradio.shared.service.OpenRadioStore
-import com.yuriy.openradio.shared.utils.MediaItemHelper
-import com.yuriy.openradio.shared.utils.gone
-import com.yuriy.openradio.shared.utils.setImageBitmap
-import com.yuriy.openradio.shared.utils.visible
+import app.coradio.shared.dependencies.DependencyRegistryCommon
+import app.coradio.shared.model.ServiceCommander
+import app.coradio.shared.model.media.MediaId
+import app.coradio.shared.model.storage.images.ImagesStore
+import app.coradio.shared.service.CoRadioService
+import app.coradio.shared.service.CoRadioStore
+import app.coradio.shared.utils.MediaItemHelper
+import app.coradio.shared.utils.gone
+import app.coradio.shared.utils.setImageBitmap
+import app.coradio.shared.utils.visible
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -79,7 +79,7 @@ abstract class MediaItemsAdapter : RecyclerView.Adapter<MediaItemViewHolder>() {
 
     override fun onViewRecycled(holder: MediaItemViewHolder) {
         super.onViewRecycled(holder)
-        holder.mImageView.setImageResource(com.yuriy.openradio.R.color.or_color_transparent)
+        holder.mImageView.setImageResource(app.coradio.R.color.or_color_transparent)
     }
 
     fun removeListener() {
@@ -174,7 +174,7 @@ abstract class MediaItemsAdapter : RecyclerView.Adapter<MediaItemViewHolder>() {
         fun updateImage(context: Context, mediaMetadata: MediaMetadata, view: ImageView) {
             view.visible()
             // Show placeholder before load an image.
-            view.setImageResource(com.yuriy.openradio.R.drawable.ic_radio_station)
+            view.setImageResource(app.coradio.R.drawable.ic_radio_station)
             val iconId = MediaItemHelper.getDrawableId(mediaMetadata.extras)
             if (MediaItemHelper.isDrawableIdValid(iconId)) {
                 view.setImageResource(iconId)
@@ -212,10 +212,10 @@ abstract class MediaItemsAdapter : RecyclerView.Adapter<MediaItemViewHolder>() {
             checkBox.setOnClickListener { view: View ->
                 val isChecked = (view as CheckBox).isChecked
                 MediaItemHelper.updateFavoriteField(mediaMetadata, isChecked)
-                val bundle = OpenRadioStore.makeUpdateIsFavoriteBundle(mediaId)
+                val bundle = CoRadioStore.makeUpdateIsFavoriteBundle(mediaId)
                 CoroutineScope(Dispatchers.Main).launch {
                     serviceCommander.sendCommand(
-                        if (isChecked) OpenRadioService.CMD_FAVORITE_OFF else OpenRadioService.CMD_FAVORITE_ON,
+                        if (isChecked) CoRadioService.CMD_FAVORITE_OFF else CoRadioService.CMD_FAVORITE_ON,
                         bundle
                     )
                 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.view.dialog
+package app.coradio.shared.view.dialog
 
 import android.app.Dialog
 import android.os.Bundle
@@ -24,17 +24,17 @@ import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
-import com.yuriy.openradio.shared.R
-import com.yuriy.openradio.shared.dependencies.CloudStoreManagerDependency
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommonUi
-import com.yuriy.openradio.shared.model.storage.CloudStoreManager
-import com.yuriy.openradio.shared.utils.SafeToast
-import com.yuriy.openradio.shared.utils.findImageButton
-import com.yuriy.openradio.shared.utils.findLinearLayout
-import com.yuriy.openradio.shared.utils.findProgressBar
-import com.yuriy.openradio.shared.utils.findTextView
-import com.yuriy.openradio.shared.utils.gone
-import com.yuriy.openradio.shared.utils.visible
+import app.coradio.shared.R
+import app.coradio.shared.dependencies.CloudStoreManagerDependency
+import app.coradio.shared.dependencies.DependencyRegistryCommonUi
+import app.coradio.shared.model.storage.CloudStoreManager
+import app.coradio.shared.utils.SafeToast
+import app.coradio.shared.utils.findImageButton
+import app.coradio.shared.utils.findLinearLayout
+import app.coradio.shared.utils.findProgressBar
+import app.coradio.shared.utils.findTextView
+import app.coradio.shared.utils.gone
+import app.coradio.shared.utils.visible
 
 /**
  * Created by Yuriy Chernyshov

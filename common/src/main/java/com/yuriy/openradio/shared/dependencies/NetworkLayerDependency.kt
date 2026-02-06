@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.dependencies
+package app.coradio.shared.dependencies
 
-import com.yuriy.openradio.shared.model.net.NetworkLayer
+import app.coradio.shared.model.net.NetworkLayer
 
 interface NetworkLayerDependency {
 

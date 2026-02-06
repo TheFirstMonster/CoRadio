@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yuriy.openradio.shared.broadcast
+package app.coradio.shared.broadcast
 
 import android.content.Context
 import android.content.Intent

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.presenter
+package app.coradio.shared.presenter
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -42,42 +42,42 @@ import androidx.media3.common.util.UnstableApi
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.gms.cast.framework.CastContext
-import com.yuriy.openradio.R
-import com.yuriy.openradio.shared.broadcast.AppLocalBroadcast
-import com.yuriy.openradio.shared.broadcast.AppLocalReceiver
-import com.yuriy.openradio.shared.broadcast.AppLocalReceiverCallback
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommon
-import com.yuriy.openradio.shared.model.ServiceCommander
-import com.yuriy.openradio.shared.model.cast.CastLayer
-import com.yuriy.openradio.shared.model.media.MediaId
-import com.yuriy.openradio.shared.model.media.MediaItemsSubscription
-import com.yuriy.openradio.shared.model.media.MediaResourceManagerListener
-import com.yuriy.openradio.shared.model.media.MediaResourcesManager
-import com.yuriy.openradio.shared.model.media.PlaybackState
-import com.yuriy.openradio.shared.model.net.NetworkLayer
-import com.yuriy.openradio.shared.model.source.SourcesLayer
-import com.yuriy.openradio.shared.model.storage.AppPreferencesManager
-import com.yuriy.openradio.shared.model.storage.FavoritesStorage
-import com.yuriy.openradio.shared.model.storage.LocationStorage
-import com.yuriy.openradio.shared.model.storage.images.ImagesStore
-import com.yuriy.openradio.shared.model.timer.SleepTimerListener
-import com.yuriy.openradio.shared.model.timer.SleepTimerModel
-import com.yuriy.openradio.shared.permission.PermissionChecker
-import com.yuriy.openradio.shared.service.OpenRadioService
-import com.yuriy.openradio.shared.service.OpenRadioStore
-import com.yuriy.openradio.shared.service.location.LocationService
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.AppUtils
-import com.yuriy.openradio.shared.utils.MediaItemHelper
-import com.yuriy.openradio.shared.utils.PlayerUtils
-import com.yuriy.openradio.shared.utils.UiUtils
-import com.yuriy.openradio.shared.utils.setImageBitmap
-import com.yuriy.openradio.shared.utils.visible
-import com.yuriy.openradio.shared.view.dialog.BaseDialogFragment
-import com.yuriy.openradio.shared.view.dialog.EditStationDialog
-import com.yuriy.openradio.shared.view.dialog.RSSettingsDialog
-import com.yuriy.openradio.shared.view.dialog.RemoveStationDialog
-import com.yuriy.openradio.shared.view.list.MediaItemsAdapter
+import app.coradio.R
+import app.coradio.shared.broadcast.AppLocalBroadcast
+import app.coradio.shared.broadcast.AppLocalReceiver
+import app.coradio.shared.broadcast.AppLocalReceiverCallback
+import app.coradio.shared.dependencies.DependencyRegistryCommon
+import app.coradio.shared.model.ServiceCommander
+import app.coradio.shared.model.cast.CastLayer
+import app.coradio.shared.model.media.MediaId
+import app.coradio.shared.model.media.MediaItemsSubscription
+import app.coradio.shared.model.media.MediaResourceManagerListener
+import app.coradio.shared.model.media.MediaResourcesManager
+import app.coradio.shared.model.media.PlaybackState
+import app.coradio.shared.model.net.NetworkLayer
+import app.coradio.shared.model.source.SourcesLayer
+import app.coradio.shared.model.storage.AppPreferencesManager
+import app.coradio.shared.model.storage.FavoritesStorage
+import app.coradio.shared.model.storage.LocationStorage
+import app.coradio.shared.model.storage.images.ImagesStore
+import app.coradio.shared.model.timer.SleepTimerListener
+import app.coradio.shared.model.timer.SleepTimerModel
+import app.coradio.shared.permission.PermissionChecker
+import app.coradio.shared.service.CoRadioService
+import app.coradio.shared.service.CoRadioStore
+import app.coradio.shared.service.location.LocationService
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppUtils
+import app.coradio.shared.utils.MediaItemHelper
+import app.coradio.shared.utils.PlayerUtils
+import app.coradio.shared.utils.UiUtils
+import app.coradio.shared.utils.setImageBitmap
+import app.coradio.shared.utils.visible
+import app.coradio.shared.view.dialog.BaseDialogFragment
+import app.coradio.shared.view.dialog.EditStationDialog
+import app.coradio.shared.view.dialog.RSSettingsDialog
+import app.coradio.shared.view.dialog.RemoveStationDialog
+import app.coradio.shared.view.list.MediaItemsAdapter
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -182,7 +182,7 @@ class MediaPresenterImpl(
         mAdapter?.listener = MediaItemsAdapterListener()
         mCurrentRadioStationView?.setOnClickListener {
             CoroutineScope(Dispatchers.Main).launch {
-                mServiceCommander.sendCommand(OpenRadioService.CMD_TOGGLE_LAST_PLAYED_ITEM)
+                mServiceCommander.sendCommand(CoRadioService.CMD_TOGGLE_LAST_PLAYED_ITEM)
             }
         }
         if (mMediaItemsStack.isNotEmpty()) {
@@ -311,7 +311,7 @@ class MediaPresenterImpl(
             // Clear stack
             mMediaItemsStack.clear()
             CoroutineScope(Dispatchers.Main).launch {
-                mServiceCommander.sendCommand(OpenRadioService.CMD_STOP_SERVICE)
+                mServiceCommander.sendCommand(CoRadioService.CMD_STOP_SERVICE)
             }
             return true
         }
@@ -533,8 +533,8 @@ class MediaPresenterImpl(
     override fun handleSaveInstanceState(outState: Bundle) {
         // Track OnSaveInstanceState passed
         mIsOnSaveInstancePassed.set(true)
-        OpenRadioStore.putRestoreState(outState, true)
-        OpenRadioStore.putCurrentParentId(outState, mCurrentParentId)
+        CoRadioStore.putRestoreState(outState, true)
+        CoRadioStore.putCurrentParentId(outState, mCurrentParentId)
     }
 
     override fun handleCurrentIndexOnQueueChanged(index: Int) {
@@ -613,7 +613,7 @@ class MediaPresenterImpl(
     }
 
     private fun restoreState(savedInstanceState: Bundle) {
-        mCurrentParentId = OpenRadioStore.getCurrentParentId(savedInstanceState)
+        mCurrentParentId = CoRadioStore.getCurrentParentId(savedInstanceState)
         restoreSelectedPosition(mCurrentParentId)
         handleMetadataChanged(mMediaRsrMgr?.mediaMetadata)
     }

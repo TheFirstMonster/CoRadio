@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.utils
+package app.coradio.shared.utils
 
 import android.app.Activity
 import android.graphics.BitmapFactory
@@ -35,21 +35,21 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.yuriy.openradio.shared.view.dialog.AboutDialog
-import com.yuriy.openradio.shared.view.dialog.AddStationDialog
-import com.yuriy.openradio.shared.view.dialog.BatteryOptimizationDialog
-import com.yuriy.openradio.shared.view.dialog.EditStationDialog
-import com.yuriy.openradio.shared.view.dialog.EqualizerDialog
-import com.yuriy.openradio.shared.view.dialog.GeneralSettingsDialog
-import com.yuriy.openradio.shared.view.dialog.CloudStorageDialog
-import com.yuriy.openradio.shared.view.dialog.FileStorageDialog
-import com.yuriy.openradio.shared.view.dialog.NetworkDialog
-import com.yuriy.openradio.shared.view.dialog.RSSettingsDialog
-import com.yuriy.openradio.shared.view.dialog.RemoveStationDialog
-import com.yuriy.openradio.shared.view.dialog.SearchDialog
-import com.yuriy.openradio.shared.view.dialog.SleepTimerDialog
-import com.yuriy.openradio.shared.view.dialog.SourceDialog
-import com.yuriy.openradio.shared.view.dialog.StreamBufferingDialog
+import app.coradio.shared.view.dialog.AboutDialog
+import app.coradio.shared.view.dialog.AddStationDialog
+import app.coradio.shared.view.dialog.BatteryOptimizationDialog
+import app.coradio.shared.view.dialog.EditStationDialog
+import app.coradio.shared.view.dialog.EqualizerDialog
+import app.coradio.shared.view.dialog.GeneralSettingsDialog
+import app.coradio.shared.view.dialog.CloudStorageDialog
+import app.coradio.shared.view.dialog.FileStorageDialog
+import app.coradio.shared.view.dialog.NetworkDialog
+import app.coradio.shared.view.dialog.RSSettingsDialog
+import app.coradio.shared.view.dialog.RemoveStationDialog
+import app.coradio.shared.view.dialog.SearchDialog
+import app.coradio.shared.view.dialog.SleepTimerDialog
+import app.coradio.shared.view.dialog.SourceDialog
+import app.coradio.shared.view.dialog.StreamBufferingDialog
 
 fun Activity.findTextView(id: Int): TextView {
     return findViewById(id)

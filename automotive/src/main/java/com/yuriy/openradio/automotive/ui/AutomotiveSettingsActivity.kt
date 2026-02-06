@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.automotive.ui
+package app.coradio.automotive.ui
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -36,43 +36,43 @@ import android.widget.SeekBar
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.yuriy.openradio.automotive.R
-import com.yuriy.openradio.automotive.dependencies.DependencyRegistryAutomotive
-import com.yuriy.openradio.shared.dependencies.CloudStoreManagerDependency
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommon
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommonUi
-import com.yuriy.openradio.shared.dependencies.FileStoreManagerDependency
-import com.yuriy.openradio.shared.dependencies.LoggingLayerDependency
-import com.yuriy.openradio.shared.dependencies.MediaPresenterDependency
-import com.yuriy.openradio.shared.dependencies.SourcesLayerDependency
-import com.yuriy.openradio.shared.model.logging.LoggingLayer
-import com.yuriy.openradio.shared.model.source.Source
-import com.yuriy.openradio.shared.model.source.SourcesLayer
-import com.yuriy.openradio.shared.model.storage.AppPreferencesManager
-import com.yuriy.openradio.shared.model.storage.CloudStoreManager
-import com.yuriy.openradio.shared.model.storage.FileStoreManager
-import com.yuriy.openradio.shared.presenter.MediaPresenter
-import com.yuriy.openradio.shared.service.OpenRadioService
-import com.yuriy.openradio.shared.service.OpenRadioStore
-import com.yuriy.openradio.shared.service.location.LocationService
-import com.yuriy.openradio.shared.utils.SafeToast
-import com.yuriy.openradio.shared.utils.findButton
-import com.yuriy.openradio.shared.utils.findCheckBox
-import com.yuriy.openradio.shared.utils.findEditText
-import com.yuriy.openradio.shared.utils.findImageButton
-import com.yuriy.openradio.shared.utils.findLinearLayout
-import com.yuriy.openradio.shared.utils.findProgressBar
-import com.yuriy.openradio.shared.utils.findSeekBar
-import com.yuriy.openradio.shared.utils.findSpinner
-import com.yuriy.openradio.shared.utils.findTextView
-import com.yuriy.openradio.shared.utils.findToolbar
-import com.yuriy.openradio.shared.utils.gone
-import com.yuriy.openradio.shared.utils.visible
-import com.yuriy.openradio.shared.view.dialog.AccountDialog
-import com.yuriy.openradio.shared.view.dialog.CloudStorageDialog
-import com.yuriy.openradio.shared.view.dialog.FileStorageDialog
-import com.yuriy.openradio.shared.view.dialog.StreamBufferingDialog
-import com.yuriy.openradio.shared.view.list.CountriesArrayAdapter
+import app.coradio.automotive.R
+import app.coradio.automotive.dependencies.DependencyRegistryAutomotive
+import app.coradio.shared.dependencies.CloudStoreManagerDependency
+import app.coradio.shared.dependencies.DependencyRegistryCommon
+import app.coradio.shared.dependencies.DependencyRegistryCommonUi
+import app.coradio.shared.dependencies.FileStoreManagerDependency
+import app.coradio.shared.dependencies.LoggingLayerDependency
+import app.coradio.shared.dependencies.MediaPresenterDependency
+import app.coradio.shared.dependencies.SourcesLayerDependency
+import app.coradio.shared.model.logging.LoggingLayer
+import app.coradio.shared.model.source.Source
+import app.coradio.shared.model.source.SourcesLayer
+import app.coradio.shared.model.storage.AppPreferencesManager
+import app.coradio.shared.model.storage.CloudStoreManager
+import app.coradio.shared.model.storage.FileStoreManager
+import app.coradio.shared.presenter.MediaPresenter
+import app.coradio.shared.service.CoRadioService
+import app.coradio.shared.service.CoRadioStore
+import app.coradio.shared.service.location.LocationService
+import app.coradio.shared.utils.SafeToast
+import app.coradio.shared.utils.findButton
+import app.coradio.shared.utils.findCheckBox
+import app.coradio.shared.utils.findEditText
+import app.coradio.shared.utils.findImageButton
+import app.coradio.shared.utils.findLinearLayout
+import app.coradio.shared.utils.findProgressBar
+import app.coradio.shared.utils.findSeekBar
+import app.coradio.shared.utils.findSpinner
+import app.coradio.shared.utils.findTextView
+import app.coradio.shared.utils.findToolbar
+import app.coradio.shared.utils.gone
+import app.coradio.shared.utils.visible
+import app.coradio.shared.view.dialog.AccountDialog
+import app.coradio.shared.view.dialog.CloudStorageDialog
+import app.coradio.shared.view.dialog.FileStorageDialog
+import app.coradio.shared.view.dialog.StreamBufferingDialog
+import app.coradio.shared.view.list.CountriesArrayAdapter
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -183,7 +183,7 @@ class AutomotiveSettingsActivity : AppCompatActivity(), MediaPresenterDependency
         val clearCache = findButton(R.id.automotive_settings_clear_cache_btn)
         clearCache.setOnClickListener {
             CoroutineScope(Dispatchers.Main).launch {
-                mMediaPresenter.getServiceCommander().sendCommand(OpenRadioService.CMD_CLEAR_CACHE)
+                mMediaPresenter.getServiceCommander().sendCommand(CoRadioService.CMD_CLEAR_CACHE)
             }
         }
 
@@ -206,7 +206,7 @@ class AutomotiveSettingsActivity : AppCompatActivity(), MediaPresenterDependency
                 val code = array[position].code
                 mMediaPresenter.onLocationChanged(code)
                 CoroutineScope(Dispatchers.Main).launch {
-                    mMediaPresenter.getServiceCommander().sendCommand(OpenRadioService.CMD_UPDATE_TREE)
+                    mMediaPresenter.getServiceCommander().sendCommand(CoRadioService.CMD_UPDATE_TREE)
                 }
             }
 
@@ -217,7 +217,7 @@ class AutomotiveSettingsActivity : AppCompatActivity(), MediaPresenterDependency
 
         val playerVolSeek = findSeekBar(R.id.automotive_player_vol_seek_bar)
         playerVolSeek.progress =
-            AppPreferencesManager.getMasterVolume(applicationContext, OpenRadioService.MASTER_VOLUME_DEFAULT)
+            AppPreferencesManager.getMasterVolume(applicationContext, CoRadioService.MASTER_VOLUME_DEFAULT)
         playerVolSeek.setOnSeekBarChangeListener(
             object : SeekBar.OnSeekBarChangeListener {
                 override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
@@ -230,9 +230,9 @@ class AutomotiveSettingsActivity : AppCompatActivity(), MediaPresenterDependency
 
                 override fun onStopTrackingTouch(seekBar: SeekBar) {
                     CoroutineScope(Dispatchers.Main).launch {
-                        val bundle = OpenRadioStore.makeMasterVolumeChangedBundle(seekBar.progress)
+                        val bundle = CoRadioStore.makeMasterVolumeChangedBundle(seekBar.progress)
                         mMediaPresenter.getServiceCommander()
-                            .sendCommand(OpenRadioService.CMD_MASTER_VOLUME_CHANGED, bundle)
+                            .sendCommand(CoRadioService.CMD_MASTER_VOLUME_CHANGED, bundle)
                     }
                 }
             }
@@ -242,10 +242,10 @@ class AutomotiveSettingsActivity : AppCompatActivity(), MediaPresenterDependency
         try {
             descView.text = String.format(
                 resources.getString(R.string.stream_buffering_descr_automotive),
-                resources.getInteger(com.yuriy.openradio.R.integer.min_buffer_val),
-                resources.getInteger(com.yuriy.openradio.R.integer.max_buffer_val),
-                resources.getInteger(com.yuriy.openradio.R.integer.min_buffer_sec),
-                resources.getInteger(com.yuriy.openradio.R.integer.max_buffer_min)
+                resources.getInteger(app.coradio.R.integer.min_buffer_val),
+                resources.getInteger(app.coradio.R.integer.max_buffer_val),
+                resources.getInteger(app.coradio.R.integer.min_buffer_sec),
+                resources.getInteger(app.coradio.R.integer.max_buffer_min)
             )
         } catch (e: Exception) {
             /* Ignore */
@@ -298,7 +298,7 @@ class AutomotiveSettingsActivity : AppCompatActivity(), MediaPresenterDependency
                                 sendLogsProgress.gone()
                                 SafeToast.showAnyThread(
                                     applicationContext,
-                                    getString(com.yuriy.openradio.shared.R.string.success)
+                                    getString(app.coradio.shared.R.string.success)
                                 )
                             }
                         },
@@ -306,14 +306,14 @@ class AutomotiveSettingsActivity : AppCompatActivity(), MediaPresenterDependency
                             runOnUiThread { sendLogsProgress.gone() }
                             SafeToast.showAnyThread(
                                 applicationContext,
-                                getString(com.yuriy.openradio.shared.R.string.failure)
+                                getString(app.coradio.shared.R.string.failure)
                             )
                         }
                     )
                 },
                 {
                     runOnUiThread { sendLogsProgress.gone() }
-                    SafeToast.showAnyThread(applicationContext, getString(com.yuriy.openradio.shared.R.string.failure))
+                    SafeToast.showAnyThread(applicationContext, getString(app.coradio.shared.R.string.failure))
                 }
             )
         }
@@ -362,13 +362,13 @@ class AutomotiveSettingsActivity : AppCompatActivity(), MediaPresenterDependency
             {
                 hideProgress()
                 SafeToast.showAnyThread(
-                    applicationContext, getString(com.yuriy.openradio.shared.R.string.success)
+                    applicationContext, getString(app.coradio.shared.R.string.success)
                 )
             },
             {
                 hideProgress()
                 SafeToast.showAnyThread(
-                    applicationContext, getString(com.yuriy.openradio.shared.R.string.failure)
+                    applicationContext, getString(app.coradio.shared.R.string.failure)
                 )
             }
         )
@@ -457,7 +457,7 @@ class AutomotiveSettingsActivity : AppCompatActivity(), MediaPresenterDependency
                 mFileStoreManager.upload(this) {
                     hideProgress()
                     SafeToast.showAnyThread(
-                        applicationContext, getString(com.yuriy.openradio.shared.R.string.failure)
+                        applicationContext, getString(app.coradio.shared.R.string.failure)
                     )
                 }
             }
@@ -465,7 +465,7 @@ class AutomotiveSettingsActivity : AppCompatActivity(), MediaPresenterDependency
                 mFileStoreManager.download(this) {
                     hideProgress()
                     SafeToast.showAnyThread(
-                        applicationContext, getString(com.yuriy.openradio.shared.R.string.failure)
+                        applicationContext, getString(app.coradio.shared.R.string.failure)
                     )
                 }
             }
@@ -483,13 +483,13 @@ class AutomotiveSettingsActivity : AppCompatActivity(), MediaPresenterDependency
                             {
                                 hideProgress()
                                 SafeToast.showAnyThread(
-                                    applicationContext, getString(com.yuriy.openradio.shared.R.string.success)
+                                    applicationContext, getString(app.coradio.shared.R.string.success)
                                 )
                             },
                             {
                                 hideProgress()
                                 SafeToast.showAnyThread(
-                                    applicationContext, getString(com.yuriy.openradio.shared.R.string.failure)
+                                    applicationContext, getString(app.coradio.shared.R.string.failure)
                                 )
                             }
                         )

@@ -6,7 +6,7 @@ apply from: "../constants.gradle"
 apply from: "../sign.gradle"
 
 android {
-    namespace = "com.yuriy.openradio.automotive"
+    namespace = "app.coradio.automotive"
     compileSdk project.ext.compileSdkVersion
 
     defaultConfig {

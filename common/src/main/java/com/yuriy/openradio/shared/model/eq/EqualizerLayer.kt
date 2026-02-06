@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.eq
+package app.coradio.shared.model.eq
 
 interface EqualizerLayer {
 

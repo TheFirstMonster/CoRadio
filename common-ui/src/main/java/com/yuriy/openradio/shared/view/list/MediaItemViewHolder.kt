@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.view.list
+package app.coradio.shared.view.list
 
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.RelativeLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.yuriy.openradio.shared.utils.findCheckBox
-import com.yuriy.openradio.shared.utils.findImageView
-import com.yuriy.openradio.shared.utils.findTextView
+import app.coradio.shared.utils.findCheckBox
+import app.coradio.shared.utils.findImageView
+import app.coradio.shared.utils.findTextView
 
 class MediaItemViewHolder(view: View, root_view_id: Int, name_view_id: Int,
                           description_view_id: Int, img_view_id: Int, favorite_view_id: Int,

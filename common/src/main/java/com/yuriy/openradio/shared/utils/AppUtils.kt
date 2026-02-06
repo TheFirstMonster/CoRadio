@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.utils
+package app.coradio.shared.utils
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -33,9 +33,9 @@ import androidx.fragment.app.FragmentActivity
 import androidx.media3.common.MimeTypes
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.common.util.Util
-import com.yuriy.openradio.R
-import com.yuriy.openradio.shared.model.media.MediaId
-import com.yuriy.openradio.shared.model.storage.AppPreferencesManager
+import app.coradio.R
+import app.coradio.shared.model.media.MediaId
+import app.coradio.shared.model.storage.AppPreferencesManager
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.ObjectInputStream

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.service.player
+package app.coradio.shared.service.player
 
 import android.content.Context
 import androidx.media3.common.util.UnstableApi
@@ -30,9 +30,9 @@ import androidx.media3.datasource.cache.NoOpCacheEvictor
 import androidx.media3.datasource.cache.SimpleCache
 import androidx.media3.exoplayer.DefaultRenderersFactory
 import androidx.media3.exoplayer.RenderersFactory
-import com.yuriy.openradio.shared.utils.AnalyticsUtils
-import com.yuriy.openradio.shared.utils.AppUtils
-import com.yuriy.openradio.shared.utils.AppUtils.getUserAgent
+import app.coradio.shared.utils.AnalyticsUtils
+import app.coradio.shared.utils.AppUtils
+import app.coradio.shared.utils.AppUtils.getUserAgent
 import java.io.File
 import java.net.CookieHandler
 import java.net.CookieManager

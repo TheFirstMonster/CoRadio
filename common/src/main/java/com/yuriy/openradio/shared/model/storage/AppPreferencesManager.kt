@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yuriy.openradio.shared.model.storage
+package app.coradio.shared.model.storage
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -34,7 +34,7 @@ object AppPreferencesManager {
     /**
      * Name of the Preferences.
      */
-    private const val FILE_NAME = "OpenRadioPref"
+    private const val FILE_NAME = "CoRadioPref"
     private const val PREFS_KEY_LAST_KNOWN_RADIO_STATION_ENABLED = "LAST_KNOWN_RADIO_STATION_ENABLED"
     private const val PREFS_KEY_IS_CUSTOM_USER_AGENT = "IS_CUSTOM_USER_AGENT"
     private const val PREFS_KEY_CUSTOM_USER_AGENT = "CUSTOM_USER_AGENT"

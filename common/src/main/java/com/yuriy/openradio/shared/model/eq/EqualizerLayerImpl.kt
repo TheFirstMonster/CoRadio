@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.eq
+package app.coradio.shared.model.eq
 
 import android.media.audiofx.Equalizer
-import com.yuriy.openradio.shared.model.storage.EqualizerStorage
-import com.yuriy.openradio.shared.model.translation.EqualizerJsonStateSerializer
-import com.yuriy.openradio.shared.model.translation.EqualizerStateJsonDeserializer
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.AppUtils
+import app.coradio.shared.model.storage.EqualizerStorage
+import app.coradio.shared.model.translation.EqualizerJsonStateSerializer
+import app.coradio.shared.model.translation.EqualizerStateJsonDeserializer
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppUtils
 
 class EqualizerLayerImpl(
     private val mEqualizerStorage: EqualizerStorage

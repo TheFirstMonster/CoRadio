@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yuriy.openradio.tv.view.fragment
+package app.coradio.tv.view.fragment
 
 import android.app.Activity
 import android.content.Intent
@@ -24,11 +24,11 @@ import androidx.leanback.app.SearchSupportFragment
 import androidx.leanback.widget.ArrayObjectAdapter
 import androidx.leanback.widget.ListRowPresenter
 import androidx.leanback.widget.ObjectAdapter
-import com.yuriy.openradio.shared.permission.PermissionChecker
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.AppUtils
-import com.yuriy.openradio.shared.utils.findView
-import com.yuriy.openradio.tv.view.activity.TvSearchActivity
+import app.coradio.shared.permission.PermissionChecker
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppUtils
+import app.coradio.shared.utils.findView
+import app.coradio.tv.view.activity.TvSearchActivity
 
 /*
  * This class demonstrates how to do in-app search

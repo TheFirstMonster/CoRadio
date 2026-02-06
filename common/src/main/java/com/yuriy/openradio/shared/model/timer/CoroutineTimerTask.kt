@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.timer
+package app.coradio.shared.model.timer
 
-import com.yuriy.openradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppLogger
 import kotlinx.coroutines.CoroutineName
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.Job

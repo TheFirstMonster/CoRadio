@@ -1,6 +1,6 @@
-package com.yuriy.openradio.automotive.ui
+package app.coradio.automotive.ui
 
-import com.yuriy.openradio.shared.model.storage.LocationStorage
+import app.coradio.shared.model.storage.LocationStorage
 
 class AutomotiveSettingsActivityPresenterImpl(
     private val mLocationStorage: LocationStorage

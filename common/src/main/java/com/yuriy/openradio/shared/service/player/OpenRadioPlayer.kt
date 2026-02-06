@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.service.player
+package app.coradio.shared.service.player
 
 import android.content.Context
 import android.os.Looper
@@ -48,16 +48,16 @@ import androidx.media3.exoplayer.source.UnrecognizedInputFormatException
 import androidx.media3.exoplayer.trackselection.DefaultTrackSelector
 import androidx.media3.extractor.metadata.icy.IcyInfo
 import androidx.media3.extractor.metadata.id3.TextInformationFrame
-import com.yuriy.openradio.R
-import com.yuriy.openradio.shared.model.cast.CastLayer
-import com.yuriy.openradio.shared.model.eq.EqualizerLayer
-import com.yuriy.openradio.shared.model.media.BrowseTree
-import com.yuriy.openradio.shared.model.storage.AppPreferencesManager
-import com.yuriy.openradio.shared.service.OpenRadioService
-import com.yuriy.openradio.shared.utils.AnalyticsUtils
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.AppUtils
-import com.yuriy.openradio.shared.utils.PlayerUtils
+import app.coradio.R
+import app.coradio.shared.model.cast.CastLayer
+import app.coradio.shared.model.eq.EqualizerLayer
+import app.coradio.shared.model.media.BrowseTree
+import app.coradio.shared.model.storage.AppPreferencesManager
+import app.coradio.shared.service.CoRadioService
+import app.coradio.shared.utils.AnalyticsUtils
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppUtils
+import app.coradio.shared.utils.PlayerUtils
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -78,7 +78,7 @@ import kotlin.math.min
  * @param mListener Listener for the wrapper's events.
  */
 @UnstableApi
-class OpenRadioPlayer(
+class CoRadioPlayer(
     private val mContext: Context,
     private val mListener: Listener,
     private val mEqualizerLayer: EqualizerLayer,
@@ -129,7 +129,7 @@ class OpenRadioPlayer(
         }
         try {
             CastPlayer(castCtx).apply {
-                setSessionAvailabilityListener(OpenRadioCastSessionAvailabilityListener())
+                setSessionAvailabilityListener(CoRadioCastSessionAvailabilityListener())
                 addListener(mComponentListener)
             }
         } catch (e: Exception) {
@@ -184,7 +184,7 @@ class OpenRadioPlayer(
         mPlayer = mExoPlayer
         mPlayer.volume = AppPreferencesManager.getMasterVolume(
             mContext,
-            OpenRadioService.MASTER_VOLUME_DEFAULT
+            CoRadioService.MASTER_VOLUME_DEFAULT
         ).toFloat() / 100.0f
         mEqualizerLayer.init((mExoPlayer as ExoPlayer).audioSessionId)
     }
@@ -1018,7 +1018,7 @@ class OpenRadioPlayer(
         }
     }
 
-    private inner class OpenRadioCastSessionAvailabilityListener : SessionAvailabilityListener {
+    private inner class CoRadioCastSessionAvailabilityListener : SessionAvailabilityListener {
 
         /**
          * Called when a Cast session has started and the user wishes to control playback on a

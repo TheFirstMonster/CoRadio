@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yuriy.openradio.shared.view.dialog
+package app.coradio.shared.view.dialog
 
 import android.content.Context
 import android.os.Bundle
@@ -21,15 +21,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import com.yuriy.openradio.shared.R
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommonUi
-import com.yuriy.openradio.shared.model.media.RadioStation
-import com.yuriy.openradio.shared.model.media.RadioStationToAdd
-import com.yuriy.openradio.shared.model.media.getStreamUrlFixed
-import com.yuriy.openradio.shared.model.media.isInvalid
-import com.yuriy.openradio.shared.utils.AppUtils
-import com.yuriy.openradio.shared.utils.SafeToast
-import com.yuriy.openradio.shared.utils.findButton
+import app.coradio.shared.R
+import app.coradio.shared.dependencies.DependencyRegistryCommonUi
+import app.coradio.shared.model.media.RadioStation
+import app.coradio.shared.model.media.RadioStationToAdd
+import app.coradio.shared.model.media.getStreamUrlFixed
+import app.coradio.shared.model.media.isInvalid
+import app.coradio.shared.utils.AppUtils
+import app.coradio.shared.utils.SafeToast
+import app.coradio.shared.utils.findButton
 
 /**
  * Created by Yuriy Chernyshov

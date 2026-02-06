@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.storage.cache.api
+package app.coradio.shared.model.storage.cache.api
 
 import androidx.room.Dao
 import androidx.room.Insert

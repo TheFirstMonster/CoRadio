@@ -1,4 +1,4 @@
-package com.yuriy.openradio.shared.model.media
+package app.coradio.shared.model.media
 
 import android.content.Context
 

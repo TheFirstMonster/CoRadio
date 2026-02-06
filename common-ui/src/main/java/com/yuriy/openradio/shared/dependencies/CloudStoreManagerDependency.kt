@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.dependencies
+package app.coradio.shared.dependencies
 
-import com.yuriy.openradio.shared.model.storage.CloudStoreManager
+import app.coradio.shared.model.storage.CloudStoreManager
 
 /**
  * [CloudStoreManagerDependency] is an interface that helps to inject [CloudStoreManager] into a client.

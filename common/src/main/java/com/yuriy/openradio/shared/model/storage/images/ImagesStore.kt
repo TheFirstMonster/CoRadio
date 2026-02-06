@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.storage.images
+package app.coradio.shared.model.storage.images
 
 import android.content.ContentResolver
 import android.net.Uri
-import com.yuriy.openradio.shared.utils.AppUtils
+import app.coradio.shared.utils.AppUtils
 
 object ImagesStore {
 
@@ -40,7 +40,7 @@ object ImagesStore {
     /**
      * The authority for the this provider.
      */
-    private const val AUTHORITY = "openradio.images"
+    private const val AUTHORITY = "coradio.images"
 
     /**
      * Uri to the authority for the this provider.

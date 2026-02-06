@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.broadcast
+package app.coradio.shared.broadcast
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import com.yuriy.openradio.shared.dependencies.DependencyRegistryCommonUi
-import com.yuriy.openradio.shared.dependencies.MediaPresenterDependency
-import com.yuriy.openradio.shared.presenter.MediaPresenter
-import com.yuriy.openradio.shared.utils.AppLogger
+import app.coradio.shared.dependencies.DependencyRegistryCommonUi
+import app.coradio.shared.dependencies.MediaPresenterDependency
+import app.coradio.shared.presenter.MediaPresenter
+import app.coradio.shared.utils.AppLogger
 
 /**
  * Created by Yuriy Chernyshov

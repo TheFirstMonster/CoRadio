@@ -16,7 +16,7 @@
 
 package wseemann.media.jplaylistparser.parser.xspf
 
-import com.yuriy.openradio.shared.utils.AppLogger
+import app.coradio.shared.utils.AppLogger
 import org.jdom2.Document
 import org.jdom2.Element
 import org.jdom2.JDOMException

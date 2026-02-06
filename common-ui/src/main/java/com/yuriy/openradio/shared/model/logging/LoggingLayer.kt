@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.logging
+package app.coradio.shared.model.logging
 
 import java.io.File
 

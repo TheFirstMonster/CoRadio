@@ -1,4 +1,4 @@
-package com.yuriy.openradio.shared.model.net
+package app.coradio.shared.model.net
 
 import android.net.Uri
 import androidx.core.util.Pair

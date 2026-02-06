@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.dependencies
+package app.coradio.shared.dependencies
 
-import com.yuriy.openradio.shared.model.logging.LoggingLayer
+import app.coradio.shared.model.logging.LoggingLayer
 
 /**
  * [LoggingLayerDependency] is an interface that helps to inject [LoggingLayer] into a client.

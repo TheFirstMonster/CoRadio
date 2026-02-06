@@ -4,7 +4,7 @@ apply from: "../constants.gradle"
 apply from: "../sign.gradle"
 
 android {
-    namespace = "com.yuriy.openradio.mobile"
+    namespace = "app.coradio.mobile"
     compileSdk project.ext.compileSdkVersion
 
     defaultConfig {

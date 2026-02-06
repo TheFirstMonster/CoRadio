@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.media.item
+package app.coradio.shared.model.media.item
 
-import com.yuriy.openradio.shared.model.media.item.MediaItemCommand.IUpdatePlaybackState
+import app.coradio.shared.model.media.item.MediaItemCommand.IUpdatePlaybackState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking

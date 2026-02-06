@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.storage.images
+package app.coradio.shared.model.storage.images
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -23,11 +23,11 @@ import android.graphics.Matrix
 import android.net.Uri
 import android.os.ParcelFileDescriptor
 import androidx.exifinterface.media.ExifInterface
-import com.yuriy.openradio.shared.model.net.DownloaderLayer
-import com.yuriy.openradio.shared.model.net.HTTPDownloaderImpl
-import com.yuriy.openradio.shared.utils.AnalyticsUtils
-import com.yuriy.openradio.shared.utils.AppLogger
-import com.yuriy.openradio.shared.utils.NetUtils
+import app.coradio.shared.model.net.DownloaderLayer
+import app.coradio.shared.model.net.HTTPDownloaderImpl
+import app.coradio.shared.utils.AnalyticsUtils
+import app.coradio.shared.utils.AppLogger
+import app.coradio.shared.utils.NetUtils
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

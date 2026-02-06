@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.dependencies
+package app.coradio.shared.dependencies
 
-import com.yuriy.openradio.shared.model.ServiceCommander
+import app.coradio.shared.model.ServiceCommander
 
 /**
  * [ServiceCommanderDependency] is an interface to that helps to inject [ServiceCommander] into a client.

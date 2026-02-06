@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.yuriy.openradio.shared.model.filter
+package app.coradio.shared.model.filter
 
-import com.yuriy.openradio.shared.model.media.RadioStation
-import com.yuriy.openradio.shared.utils.AppUtils
+import app.coradio.shared.model.media.RadioStation
+import app.coradio.shared.utils.AppUtils
 
 /**
  * Default implementation of the [Filter] interface.
