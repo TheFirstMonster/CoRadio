@@ -134,7 +134,7 @@ class LoggingLayerImpl(private val mContext: Context) : LoggingLayer {
         val message = MimeMessage(session).apply {
             setFrom(InternetAddress(mUser))
             setRecipients(Message.RecipientType.TO, InternetAddress.parse(mUser))
-            setSubject("ADB logs for Open Radio")
+            setSubject("ADB logs for CoRadio")
 
             // Create a multipart message
             val multipart = MimeMultipart()

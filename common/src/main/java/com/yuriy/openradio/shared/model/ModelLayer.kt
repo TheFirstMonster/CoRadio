@@ -28,7 +28,7 @@ import app.coradio.shared.service.location.Country
  * On 12/14/14
  * E-Mail: chernyshov.yuriy@gmail.com
  *
- * [ModelLayer] is a model interface which provides service behavior of the Open Radio.
+ * [ModelLayer] is a model interface which provides service behavior of the CoRadio.
  */
 interface ModelLayer {
     /**
