@@ -1,13 +1,22 @@
 # Fork
 
-This is a fork of the original OpenRadio Android App by Yurii Chernyshov which was originally open-source.
+This is a fork of the OpenRadio Android App by Yurii Chernyshov which was originally open-source.
 The fork exists to preserve an ad-free and fully open-source version of the app after the original project was aquired.
 
 An archive of the original repo can be found on [Software Heritage](https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://github.com/ChernyshovYuriy/OpenRadio).
 
 This project is not affiliated with or endorsed by the original project or its current maintainers.
 
-# Open Radio #
+## Changes
+
+- Removed analytics
+- Removed funding/support links
+
+## Downloads
+
+* [GitHub Actions](https://github.com/TheFirstMonster/CoRadio/actions/workflows/android.yml)
+
+# Original README #
 
 ### What is this ? ###
 
@@ -27,10 +36,6 @@ This project is not affiliated with or endorsed by the original project or its c
 * FOREGROUND_SERVICE - To keep service active while playing stream.
 * BLUETOOTH, BLUETOOTH_ADMIN, BLUETOOTH_CONNECT - On user's demand only - to handle connection with a Bluetooth device.
 * RECORD_AUDIO - On user's demand only - to use voice search engine on Android TV.
-
-### Downloads ###
-
-* [GitHub Actions](https://github.com/TheFirstMonster/CoRadio/actions/workflows/android.yml)
 
 **Application is fully compatible with vehicle's system.**
 
