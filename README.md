@@ -1,7 +1,7 @@
 # Fork
 
 This is a fork of the OpenRadio Android App by Yurii Chernyshov which was originally open-source.
-The fork exists to preserve an ad-free and fully open-source version of the app after the original project was aquired.
+The fork exists to preserve an ad-free and fully open-source version of the app after the original project was aquired. No new features will be added.
 
 An archive of the original repo can be found on [Software Heritage](https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://github.com/ChernyshovYuriy/OpenRadio).
 
