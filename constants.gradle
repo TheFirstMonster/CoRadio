@@ -62,7 +62,7 @@ project.ext {
      * Application constants
      */
     applicationId = "app.coradio"
-    versionName = "15.0.0"
+    versionName = "1.0.0"
     versionCode = 0
 
     /**

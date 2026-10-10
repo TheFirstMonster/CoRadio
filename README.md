@@ -14,7 +14,7 @@ This project is not affiliated with or endorsed by the original project or its c
 
 ## Downloads
 
-* [GitHub Actions](https://github.com/TheFirstMonster/CoRadio/actions/workflows/android.yml)
+* [GitHub Releases](https://github.com/TheFirstMonster/CoRadio/releases)
 
 # Original README #
 
